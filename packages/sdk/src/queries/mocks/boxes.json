@@ -1,0 +1,53 @@
+[
+  {
+    "token_address": "0xa73b22184a1a99a78aac9327e72bec2a889c6dc5",
+    "token_id": "1",
+    "owner_of": "0x3a5557ece3cb2804d649fed545d5fbaf1b667d2b",
+    "block_number": "10520796",
+    "block_number_minted": "8125400",
+    "token_hash": "ed4cebb10a5af4210e4854f221f8de8d",
+    "amount": "129",
+    "contract_type": "ERC1155",
+    "name": "ZOABoxNFT",
+    "symbol": "ZOABOX",
+    "token_uri": "https://ipfs.moralis.io:2053/ipfs/QmczGLcfxTZYbLLg1xRevzVCrp9xHBeQUp9uyJo2uSVTWV/0000000000000000000000000000000000000000000000000000000000000001.json",
+    "metadata": "{\"name\":\"Explorer Potion Box\",\"description\":\"This is the Bold Point Explorer Potion Box\\n\\nFrom this box you are able to receive:\\n\\n - Lesser Mana Potion\\n - Lesser Instant Mana Potion\\n - Lesser Healing Potion\\n - Lesser Instant Healing Potion\\n - Lesser Instant Energy Potion\\n - Medium Mana Potion\\n - Medium Instant Mana Potion\\n - Medium Healing Potion\\n - Medium Instant Healing  Potion\\n\\nStay sane!\",\"image\":\"ipfs://QmPzZH4wp83rhyLnpT9brvqHPdMCY7dc3wsTxeKSXiX8J1/1.png\",\"properties\":{\"Type\":\"Bold Point Box\",\"Drop Area\":\"LOOT\",\"Items\":\"Potions\",\"Rarity\":\"Magic\",\"Special\":\"The 1st Drop!\"}}",
+    "synced_at": "2022-06-10T16:40:27.176Z",
+    "last_token_uri_sync": "2022-06-08T16:51:53.860Z",
+    "last_metadata_sync": "2022-06-10T16:40:27.176Z"
+  },
+  {
+    "token_address": "0xa73b22184a1a99a78aac9327e72bec2a889c6dc5",
+    "token_id": "3",
+    "owner_of": "0x3a5557ece3cb2804d649fed545d5fbaf1b667d2b",
+    "block_number": "8424023",
+    "block_number_minted": "8246888",
+    "token_hash": "18b8347d4c27e0eba0c821f505cc3b2d",
+    "amount": "52",
+    "contract_type": "ERC1155",
+    "name": "ZOABoxNFT",
+    "symbol": "ZOABOX",
+    "token_uri": "https://ipfs.moralis.io:2053/ipfs/QmczGLcfxTZYbLLg1xRevzVCrp9xHBeQUp9uyJo2uSVTWV/0000000000000000000000000000000000000000000000000000000000000003.json",
+    "metadata": "{\"name\":\"Pathfinder Potion Box\",\"description\":\"This is the Bold Point Explorer Potion Box\\n\\nFrom this box you are able to receive:\\n\\n - Lesser Mana Potion\\n - Lesser Instant Mana Potion\\n - Lesser Healing Potion\\n - Lesser Instant Healing  Potion\\n - Medium Mana Potion\\n - Medium Instant Mana Potion\\n - Medium Healing Potion\\n - Medium Instant Healing  Potion\\n - Greater Mana Potion\\n - Greater Instant Mana Potion\\n - Greater Healing Potion\\n - Greater Instant Healing  Potion\\n - Greater Instant Energy Potion\\n - Grand Mana Potion\\n - Grand Healing Potion\\n\\nStay sane!\",\"image\":\"ipfs://QmPzZH4wp83rhyLnpT9brvqHPdMCY7dc3wsTxeKSXiX8J1/3.png\",\"properties\":{\"Type\":\"Bold Point Box\",\"Drop Area\":\"LOOT\",\"Items\":\"Potions\",\"Rarity\":\"Epic\",\"Special\":\"The 1st Drop\"}}",
+    "synced_at": "2022-06-10T16:40:27.176Z",
+    "last_token_uri_sync": "2022-06-08T16:51:53.860Z",
+    "last_metadata_sync": "2022-06-10T16:40:27.176Z"
+  },
+  {
+    "token_address": "0xa73b22184a1a99a78aac9327e72bec2a889c6dc5",
+    "token_id": "2",
+    "owner_of": "0x3a5557ece3cb2804d649fed545d5fbaf1b667d2b",
+    "block_number": "8424023",
+    "block_number_minted": "8246904",
+    "token_hash": "ebdb17823b0f65d9583e25410ff0c7ae",
+    "amount": "95",
+    "contract_type": "ERC1155",
+    "name": "ZOABoxNFT",
+    "symbol": "ZOABOX",
+    "token_uri": "https://ipfs.moralis.io:2053/ipfs/QmczGLcfxTZYbLLg1xRevzVCrp9xHBeQUp9uyJo2uSVTWV/0000000000000000000000000000000000000000000000000000000000000002.json",
+    "metadata": "{\"name\":\"Adventure Potion Box\",\"description\":\"This is the Bold Point Explorer Potion Box\\n\\nFrom this box you are able to receive:\\n\\n - Lesser Mana Potion\\n - Lesser Instant Mana Potion\\n - Lesser Healing Potion\\n - Lesser Instant Healing  Potion\\n - Medium Mana Potion\\n - Medium Instant Mana Potion\\n - Medium Healing Potion\\n - Medium Instant Healing  Potion\\n - Greater Mana Potion\\n - Greater Instant Mana Potion\\n - Greater Healing Potion\\n - Greater Instant Healing  Potion\\n - Greater Instant Energy Potion\\n - Grand Mana Potion\\n - Grand Healing Potion\\n\\nStay sane!\",\"image\":\"ipfs://QmPzZH4wp83rhyLnpT9brvqHPdMCY7dc3wsTxeKSXiX8J1/2.png\",\"properties\":{\"Type\":\"Bold Point Box\",\"Drop Area\":\"LOOT\",\"Items\":\"Potions\",\"Rarity\":\"Rare\",\"Special\":\"The 1st Drop\"}}",
+    "synced_at": "2022-06-08T16:51:55.805Z",
+    "last_token_uri_sync": "2022-06-08T16:51:53.860Z",
+    "last_metadata_sync": "2022-06-08T16:51:55.805Z"
+  }
+]

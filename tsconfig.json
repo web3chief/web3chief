@@ -23,7 +23,8 @@
       "@web3chief/cli": ["./packages/cli"],
       "@web3chief/cli/*": ["./packages/cli*"],
       "@web3chief/schematics": ["./packages/schematics"],
-      "@web3chief/schematics/*": ["./packages/schematics*"]
+      "@web3chief/schematics/*": ["./packages/schematics*"],
+      "@web3chief/sdk/*": ["./packages/sdk/src/*"]
     },
   }
 }
