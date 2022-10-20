@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    // "baseUrl": "./",
+    // "paths": {
+    //   "@web3chief/sdk/*": [
+    //     "src/*",
+    //   ]
+    // },
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}
