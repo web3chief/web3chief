@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsWeb3ChiefDefaultApp",
+  "title": "Web3chief Default App Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "number" }
+      ],
+      "description": "The name of the application.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the new project?"
+    },
+    "author": {
+      "type": "string",
+      "description": "Web3chief application author.",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "description": "Web3chief application description.",
+      "default": ""
+    },
+    "directory": {
+      "type": "string",
+      "description": "Web3chief application destination directory."
+    },
+    "version": {
+      "type": "string",
+      "description": "Web3chief application version.",
+      "default": "0.0.1"
+    },
+    "language": {
+      "type": "string",
+      "description": "Web3chief application language."
+    },
+    "packageManager": {
+      "type": "string",
+      "description": "Web3chief application package manager."
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Web3chief application dependencies."
+    },
+    "devDependencies": {
+      "type": "string",
+      "description": "Web3chief application development dependencies."
+    }
+  },
+  "required": ["name"]
+}

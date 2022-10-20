@@ -1,0 +1,26 @@
+{
+  "name": "@web3chief/cli",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "node bin/web3chief.js"
+  },
+  "dependencies": {
+    "@angular-devkit/core": "14.2.2",
+    "@angular-devkit/schematics": "14.2.2",
+    "@angular-devkit/schematics-cli": "14.2.2",
+    "@web3chief/schematics": "0.1.0",
+    "chalk": "3.0.0",
+    "commander": "4.1.1",
+    "inquirer": "7.3.3",
+    "node-emoji": "1.11.0",
+    "ora": "5.4.1",
+    "os-name": "4.0.1",
+    "typescript": "4.8.3"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.2",
+    "@types/node": "^18.11.0",
+    "@types/node-emoji": "1.8.2"
+  }
+}

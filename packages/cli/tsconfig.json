@@ -1,0 +1,5 @@
+{
+  "extends": "./../../tsconfig.json",
+  "include": ["actions", "bin", "commands", "lib", "./package.json"],
+  "exclude": ["node_modules", "e2e"]
+}

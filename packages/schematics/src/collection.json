@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "default-app": {
+      "factory": "./lib/default-app/default-app.factory#main",
+      "description": "Create a default web3chief application.",
+      "schema": "./lib/default-app/schema.json"
+    }
+  }
+}

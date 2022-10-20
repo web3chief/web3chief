@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "useUnknownInCatchVariables": false,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "skipLibCheck": true,
+    "strict": true,
+    "sourceMap": false,
+    "allowJs": true,
+//    "outDir": "dist",
+    "lib": ["es2017"],
+    "paths": {
+      "@web3chief/cli": ["./packages/cli"],
+      "@web3chief/cli/*": ["./packages/cli*"],
+      "@web3chief/schematics": ["./packages/schematics"],
+      "@web3chief/schematics/*": ["./packages/schematics*"]
+    },
+  }
+}
