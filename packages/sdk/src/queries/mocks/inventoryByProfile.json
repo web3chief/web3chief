@@ -1,0 +1,38 @@
+[
+  {
+    "token_address": "0x64e0248f23ce42e521f8dd8034fd436bd2ffa4b5",
+    "token_id": "16",
+    "owner_of": "0x3a5557ece3cb2804d649fed545d5fbaf1b667d2b",
+    "block_number": "10353599",
+    "block_number_minted": "10210622",
+    "token_hash": "63b8cde78ac9b51ea3e23d6812e34ef9",
+    "amount": "18",
+    "contract_type": "ERC1155",
+    "name": "Bold Point Testnet potions",
+    "symbol": "TPOTION",
+    "token_uri": "https://ipfs.moralis.io:2053/ipfs/QmcMF1ZPoABfdXFdqM2Zkc1Ui4hnMXTA87EdQfjfPscZHe/0000000000000000000000000000000000000000000000000000000000000010.json",
+    "metadata": "{\"name\":\"Greate Energy Refresh\",\"description\":\"Regenerates full energy\",\"image\":\"ipfs://QmfC5T8HhdsSKwS8frEebL57r6WERHqmuXwtaiWWqmtfKU/0000000000000000000000000000000000000000000000000000000000000010.png\",\"properties\":{\"Type\":\"Potions\",\"Items\":\"Potions\",\"Rarity\":\"Legendary\"}}",
+    "synced_at": "2022-06-02T09:23:15.513Z",
+    "last_token_uri_sync": "2022-06-02T09:23:13.608Z",
+    "last_metadata_sync": "2022-06-02T09:23:15.513Z",
+    "assetName": "Pot_el1_LesENPotInst"
+  },
+  {
+    "token_address": "0x64e0248f23ce42e521f8dd8034fd436bd2ffa4b5",
+    "token_id": "13",
+    "owner_of": "0x3a5557ece3cb2804d649fed545d5fbaf1b667d2b",
+    "block_number": "10353599",
+    "block_number_minted": "10210615",
+    "token_hash": "cf021859ae3494a5a741a755a1da1ce2",
+    "amount": "66",
+    "contract_type": "ERC1155",
+    "name": "Bold Point Testnet potions",
+    "symbol": "TPOTION",
+    "token_uri": "https://ipfs.moralis.io:2053/ipfs/QmcMF1ZPoABfdXFdqM2Zkc1Ui4hnMXTA87EdQfjfPscZHe/000000000000000000000000000000000000000000000000000000000000000d.json",
+    "metadata": "{\"name\":\"Grand healing Potion\",\"description\":\"Regenerates 90% HP instantly\",\"image\":\"ipfs://QmfC5T8HhdsSKwS8frEebL57r6WERHqmuXwtaiWWqmtfKU/000000000000000000000000000000000000000000000000000000000000000d.png\",\"properties\":{\"Type\":\"Potions\",\"Items\":\"Potions\",\"Rarity\":\"Legendary\"}}",
+    "synced_at": "2022-06-02T09:23:15.513Z",
+    "last_token_uri_sync": "2022-06-02T09:23:13.608Z",
+    "last_metadata_sync": "2022-06-02T09:23:15.513Z",
+    "assetName": "Pot_el1_LesHPPotInst"
+  }
+]
