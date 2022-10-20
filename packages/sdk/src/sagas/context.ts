@@ -65,7 +65,7 @@ export function* getQueryContext() {
 }
 
 export function* resetQueryContext() {
-  const context = yield* getContext(QUERY_CONTEXT)
+  const context = yield* getContext<QueryContext>(QUERY_CONTEXT)
 
   yield setContext({
     [QUERY_CONTEXT]: Object.assign(context, {
@@ -82,7 +82,7 @@ export interface SettingsContext {
 }
 
 export function* setSettingsContext(newContext: SettingsContext) {
-  const context = yield* getContext(SETTINGS_CONTEXT)
+  const context = yield* getContext<SettingsContext>(SETTINGS_CONTEXT)
 
   yield setContext({
     [SETTINGS_CONTEXT]: Object.assign(context, newContext),
@@ -94,7 +94,7 @@ export function* getSettingsContext() {
 }
 
 export function* resetSettingsContext() {
-  const context = yield* getContext(SETTINGS_CONTEXT)
+  const context = yield* getContext<SettingsContext>(SETTINGS_CONTEXT)
 
   yield setContext({
     [SETTINGS_CONTEXT]: Object.assign(context, {
@@ -111,7 +111,7 @@ export type ConnectorContext = {
 }
 
 export function* setConnectorContext(newContext: Partial<ConnectorContext>) {
-  const context = yield* getContext(CONNECTOR_CONTEXT)
+  const context = yield* getContext<ConnectorContext>(CONNECTOR_CONTEXT)
 
   yield setContext({
     [CONNECTOR_CONTEXT]: Object.assign(context, newContext),
@@ -123,7 +123,7 @@ export function* getConnectorContext() {
 }
 
 export function* resetConnectorContext() {
-  const context = yield* getContext(CONNECTOR_CONTEXT)
+  const context = yield* getContext<ConnectorContext>(CONNECTOR_CONTEXT)
 
   yield setContext({
     [CONNECTOR_CONTEXT]: Object.assign(context, {
@@ -139,7 +139,7 @@ export type QueryCacheContext = {
 }
 
 export function* setQueryCacheContext(newContext: QueryCacheContext) {
-  const context = yield* getContext(QUERY_CACHE_CONTEXT)
+  const context = yield* getContext<QueryCacheContext>(QUERY_CACHE_CONTEXT)
 
   yield setContext({
     [QUERY_CACHE_CONTEXT]: Object.assign(context, newContext),
@@ -151,7 +151,7 @@ export function* getQueryCacheContext() {
 }
 
 export function* resetQueryCacheContext() {
-  const context = yield* getContext(QUERY_CACHE_CONTEXT)
+  const context = yield* getContext<QueryCacheContext>(QUERY_CACHE_CONTEXT)
 
   yield setContext({
     [QUERY_CACHE_CONTEXT]: Object.assign(context, {

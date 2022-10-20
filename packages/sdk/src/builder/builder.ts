@@ -43,8 +43,9 @@ export function createBuilder(createOptions = DEFAULT_OPTIONS) {
 
     directorr.addReduxMiddlewares([sagaMiddleware])
     let sagaTask = sagaMiddleware.run(root)
-
+    // @ts-ignore
     if ((import.meta as any).webpackHot) {
+      // @ts-ignore
       ;(import.meta as any).webpackHot?.accept('@web3chief/sdk/sagas', () => {
         // eslint-disable-next-line @typescript-eslint/no-var-requires, global-require
         const { root } = require('@web3chief/sdk/sagas')
