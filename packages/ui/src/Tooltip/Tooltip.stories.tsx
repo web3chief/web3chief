@@ -2,8 +2,6 @@ import React from 'react'
 import { ComponentStory } from '@storybook/react'
 import { Tooltip } from './index'
 import { Box } from '@web3chief/ui/Box'
-import { InventoryTooltipBody } from '@web3chief/ui/Tooltip/Bodyes/InventoryTooltipBody'
-import { mockInventoryItem } from '@web3chief/ui/InventoryItem/Mocks'
 import { Typography } from '@mui/material'
 
 export default {
@@ -78,17 +76,3 @@ const Template: ComponentStory<typeof Tooltip> = args => (
     </Box>
   </Box>
 )
-
-export const TooltipWithBody = Template.bind({})
-
-TooltipWithBody.args = {
-  //TODO: выпилить потом все это
-  children: <InventoryTooltipBody {...(mockInventoryItem as any)} />,
-}
-
-export const TooltipDefaultBody = Template.bind({})
-
-TooltipDefaultBody.args = {
-  children:
-    'Game inventory — inventory of an active Profile that you can use in the game and transfer it to the Wallet Inventory.',
-}

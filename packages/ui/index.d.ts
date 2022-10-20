@@ -13,3 +13,7 @@ declare module '*.svg' {
   export default value
 }
 
+interface Window {
+  ethereum: any
+  curProvider: any
+}
