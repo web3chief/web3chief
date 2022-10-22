@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import { ComponentStory } from '@storybook/react'
 import Timer from './index'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 
 const TimerNft: FC = () => <></>
 
 export default {
-  title: '@web3chief/ui/Timer',
+  title: 'Timer',
   component: Timer,
 }
 

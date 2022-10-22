@@ -7,7 +7,7 @@ import { DialogHeader } from '../Dialog/DialogHeader'
 import { DialogContent } from '../Dialog/DialogContent'
 import { useTranslation } from 'next-i18next'
 
-interface WarningModalProps {
+export interface WarningModalProps {
   text?: string
   buttons?: ReactNode[]
   title?: string

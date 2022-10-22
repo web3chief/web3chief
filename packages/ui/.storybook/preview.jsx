@@ -7,7 +7,7 @@ import * as NextImage from 'next/image'
 import { CacheProvider } from '@emotion/react'
 import { DirectorrProvider } from '@nimel/directorr-react'
 import { withNextRouter } from '@gogaille/storybook-addon-next-router'
-import { SnackbarProvider } from '@web3chief/ui/Snackbar'
+import { SnackbarProvider } from '..src/componets/Snackbar'
 import { createEmotionCache } from '../src/utils/createEmotionCache'
 import { Notification } from '../src/@web3chief/ui/Notification/Notification'
 import {

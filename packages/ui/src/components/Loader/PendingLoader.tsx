@@ -1,6 +1,6 @@
 import { useTheme, keyframes, Typography } from '@mui/material'
-import { Box } from '@web3chief/ui/Box'
-import { Button } from '@web3chief/ui/Button'
+import { Box } from '../Box'
+import { Button } from '../Button'
 
 const loaderAnim = keyframes`
      0%{transform:rotate(0deg);}

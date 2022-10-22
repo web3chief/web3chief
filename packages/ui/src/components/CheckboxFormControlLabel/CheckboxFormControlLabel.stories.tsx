@@ -1,10 +1,10 @@
 import React from 'react'
 import { ComponentStory } from '@storybook/react'
-import { CheckboxFormControlLabel } from '@web3chief/ui/CheckboxFormControlLabel'
-import { Box } from '@web3chief/ui/Box'
+import { CheckboxFormControlLabel } from '../CheckboxFormControlLabel'
+import { Box } from '../Box'
 
 export default {
-  title: '@web3chief/ui/Checkbox',
+  title: '../Checkbox',
   component: CheckboxFormControlLabel,
   parameters: {
     actions: {},

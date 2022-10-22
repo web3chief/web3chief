@@ -1,10 +1,10 @@
 import React, { FC, ReactNode } from 'react'
-import { Box } from '@web3chief/ui/Box'
-import { Tooltip } from '@web3chief/ui/Tooltip'
+import { Box } from '../Box'
+import { Tooltip } from '../Tooltip'
 import { Skeleton, Typography } from '@mui/material'
 import { TypographyProps } from '@mui/material/Typography'
 
-interface TextRowProps {
+export interface TextRowProps {
   label: string
   tooltip?: string
   labelVariant?: TypographyProps['variant']

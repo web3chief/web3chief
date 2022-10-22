@@ -3,10 +3,10 @@ import { Dialog } from './Dialog'
 import { DialogHeader } from './DialogHeader'
 import { DialogContent } from './DialogContent'
 import React from 'react'
-import { useModal } from '@web3chief/ui/hooks/useModal'
+import { useModal } from '../../hooks/useModal'
 
 export default {
-  title: '@web3chief/ui/Dialog',
+  title: 'Dialog',
   component: Dialog,
 }
 

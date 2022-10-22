@@ -2,10 +2,10 @@ import React from 'react'
 import { ComponentStory } from '@storybook/react'
 import { Box } from '@mui/material'
 import { SignIn } from './SignIn'
-import { useModal } from '@web3chief/ui/hooks'
+import { useModal } from '../../hooks'
 
 export default {
-  title: '@web3chief/ui/SignIn',
+  title: 'SignIn',
   component: SignIn,
   parameters: {
     actions: {},

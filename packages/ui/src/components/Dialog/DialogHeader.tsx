@@ -1,10 +1,9 @@
 import { SxProps, Typography } from '@mui/material'
-import { CloseIcon } from '@web3chief/ui/Icon/CloseIcon'
+import { CloseIcon, ChevronLeftIcon } from '../Icon'
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'
 import { FC } from 'react'
-import { Box } from '@web3chief/ui/Box'
-import { ChevronLeftIcon } from '@web3chief/ui/Icon/ChevronLeftIcon'
-import { Skeleton } from '@web3chief/ui/Skeleton'
+import { Box } from '../Box'
+import { Skeleton } from '../Skeleton'
 
 export type DialogHeaderProps = {
   title: string

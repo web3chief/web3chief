@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import Typography from '@mui/material/Typography'
-import { Box, BoxProps } from '@web3chief/ui/Box'
-import { ArrowRightIcon } from '@web3chief/ui/Icon/ArrowRightIcon'
-import { Grid } from '@web3chief/ui/Grid'
-import { NewsBanner, NewsBannerProps } from '@web3chief/ui/News/NewsBanner'
+import { Box, BoxProps } from '../Box'
+import { ArrowRightIcon } from '../Icon/ArrowRightIcon'
+import { Grid } from '../Grid'
+import { NewsBanner, NewsBannerProps } from '../News/NewsBanner'
 /* import Link from 'next/link'
-import { MEDIUM_URL } from '@web3chief/ui/config/urls' */
-import { Button } from '@web3chief/ui/Button'
+import { MEDIUM_URL } from '../config/urls' */
+import { Button } from '../Button'
 import { useTranslation } from 'next-i18next'
 
 export type NewsProps = {

@@ -2,7 +2,7 @@ import { FC, useEffect } from 'react'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@nimel/directorr-react'
 import { NotificationStore } from './NotificationStore'
-import { useSnackbar } from '@web3chief/ui/Snackbar'
+import { useSnackbar } from '../Snackbar'
 
 export const Notification: FC = observer(() => {
   const { payload } = useStore(NotificationStore)

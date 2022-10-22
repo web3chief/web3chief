@@ -5,13 +5,13 @@ import { SliderBold } from '../SliderBold'
 import { useTranslation } from 'next-i18next'
 import { FC } from 'react'
 
-export type TokenVestingCardProps = {
+export type TokenVestingBoardProps = {
   totalValue: string | number
   token: string
   currentValue: string
 }
 
-export const TokenVestingBoard: FC<TokenVestingCardProps> = ({
+export const TokenVestingBoard: FC<TokenVestingBoardProps> = ({
   totalValue,
   token,
   currentValue,

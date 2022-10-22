@@ -1,9 +1,9 @@
 import React, { FC, ReactNode } from 'react'
 import Typography from '@mui/material/Typography'
-import { Box } from '@web3chief/ui/Box'
-import { BannerContainer as BannerBlock } from '@web3chief/ui/Banner'
+import { Box } from '../Box'
+import { BannerContainer as BannerBlock } from '../Banner'
 import { Stack } from '@mui/material'
-import { Button } from '@web3chief/ui/Button'
+import { Button } from '../Button'
 import { BoxProps as MuiBoxProps } from '@mui/material/Box/Box'
 
 type ButtonProps = {

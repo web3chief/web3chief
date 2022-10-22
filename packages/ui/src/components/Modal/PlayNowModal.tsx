@@ -1,22 +1,22 @@
 import React, { FC, ReactNode } from 'react'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 import { Stack, Typography } from '@mui/material'
-import { Button } from '@web3chief/ui/Button'
-import { Dialog } from '@web3chief/ui/Dialog'
-import { DialogHeader } from '@web3chief/ui/Dialog/DialogHeader'
-import { DialogContent } from '@web3chief/ui/Dialog/DialogContent'
-import { Tooltip } from '@web3chief/ui/Tooltip'
-import { DefaultTooltipBody } from '@web3chief/ui/Tooltip/Bodyes/DefaultTooltipBody'
+import { Button } from '../Button'
+import { Dialog } from '../Dialog'
+import { DialogHeader } from '../Dialog/DialogHeader'
+import { DialogContent } from '../Dialog/DialogContent'
+import { Tooltip } from '../Tooltip'
+import { DefaultTooltipBody } from '../Tooltip/Bodyes/DefaultTooltipBody'
 import { useTranslation } from 'next-i18next'
 
-interface ButtonPlayNowModalProps {
+export interface ButtonPlayNowModalProps {
   icon: ReactNode
   link?: string
   name: string
   comingSoon?: boolean
 }
 
-interface PlayNowModalProps {
+export interface PlayNowModalProps {
   isOpen: boolean
   closeModal: () => void
   buttons: ButtonPlayNowModalProps[]

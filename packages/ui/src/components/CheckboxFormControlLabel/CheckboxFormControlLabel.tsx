@@ -1,6 +1,6 @@
 import { FormControlLabel } from '@mui/material'
 import { FormControlLabelProps } from '@mui/material/FormControlLabel/FormControlLabel'
-import { Checkbox } from '@web3chief/ui/Checkbox'
+import { Checkbox } from '../Checkbox'
 import { FC } from 'react'
 
 export type CheckboxFormControlLabelProps = Omit<FormControlLabelProps, 'control'>

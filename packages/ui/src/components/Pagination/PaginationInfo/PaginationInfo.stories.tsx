@@ -1,11 +1,11 @@
 import React from 'react'
 import { ComponentStory } from '@storybook/react'
 import Box from '@mui/material/Box'
-import { PaginationInfo } from '@web3chief/ui/Pagination/PaginationInfo/PaginationInfo'
-import { Pagination } from '@web3chief/ui/Pagination'
+import { PaginationInfo } from './PaginationInfo'
+import { Pagination } from '../Pagination'
 
 export default {
-  title: '@web3chief/ui/Pagination',
+  title: 'Pagination',
   component: PaginationInfo,
 }
 

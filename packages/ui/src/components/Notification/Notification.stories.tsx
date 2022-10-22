@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { NotificationStore } from './NotificationStore'
 import { useStore } from '@nimel/directorr-react'
-import { Button } from '@web3chief/ui/Button'
+import { Button } from '../Button'
 
 const SnackBlock = () => {
   const { open } = useStore(NotificationStore)
@@ -10,7 +10,7 @@ const SnackBlock = () => {
 }
 
 export default {
-  title: '@web3chief/ui/Notification',
+  title: 'Notification',
   component: SnackBlock,
 } as ComponentMeta<typeof SnackBlock>
 

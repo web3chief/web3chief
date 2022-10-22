@@ -2,7 +2,7 @@ import React from 'react'
 import { ComponentStory } from '@storybook/react'
 import { WalletModal } from './index'
 import { useModal } from '../../hooks'
-import { getConnectors, MAINNET_BSC_CHAIN_ID } from '@web3chief/sdk'
+import { getConnectors, MAINNET_BSC_CHAIN_ID } from '../../../../sdk'
 
 export default {
   title: 'WalletModal',

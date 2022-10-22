@@ -1,14 +1,14 @@
-import { ComponentStory } from '@storybook/react'
+
 import { BuyTokenModal } from './BuyTokenModal'
 import React from 'react'
-import { useModal } from '@web3chief/ui/hooks/useModal'
-import { PancakeIcon } from '../Icon/'
-import { UniswapIcon } from '../Icon/'
+import { useModal } from '../../hooks/useModal'
+import { PancakeIcon, UniswapIcon } from '../Icon/'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {
   title: 'BuyTokenModal',
   component: BuyTokenModal,
-}
+} as ComponentMeta <typeof BuyTokenModal>
 
 const Template: ComponentStory<typeof BuyTokenModal> = () => {
   const buttons = [

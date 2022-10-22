@@ -1,12 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Community } from './Community'
-import { DiscordIcon } from '@web3chief/ui/Icon/DiscordIcon'
-import { TwitterIcon } from '@web3chief/ui/Icon/TwitterIcon'
-import { TelegramIcon } from '@web3chief/ui/Icon/TelegramIcon'
+import { DiscordIcon, TwitterIcon, TelegramIcon } from '../Icon'
 import React from 'react'
 
 export default {
-  title: '@web3chief/ui/Community',
+  title: 'Community',
   component: Community,
 } as ComponentMeta<typeof Community>
 

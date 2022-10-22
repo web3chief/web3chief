@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Typography from '@mui/material/Typography'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 import { alpha, useTheme } from '@mui/material'
 
 export type NewsBannerProps = {

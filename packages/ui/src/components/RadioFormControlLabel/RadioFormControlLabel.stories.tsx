@@ -1,10 +1,10 @@
 import React from 'react'
 import { ComponentStory } from '@storybook/react'
-import { RadioFormControlLabel } from '@web3chief/ui/RadioFormControlLabel'
+import { RadioFormControlLabel } from '../RadioFormControlLabel'
 import { Box, RadioGroup } from '@mui/material'
 
 export default {
-  title: '@web3chief/ui/RadioButton',
+  title: 'RadioButton',
   component: RadioFormControlLabel,
   parameters: {
     actions: {},

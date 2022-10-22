@@ -6,11 +6,11 @@ import { Dialog } from '../Dialog'
 import Link from '@mui/material/Link'
 import { BinanceChainIcon } from '../Icon/'
 import { DialogHeader } from '../Dialog/DialogHeader'
-import { DialogContent } from '../DialogContent'
+import { DialogContent } from '../Dialog/DialogContent'
 import { PancakeIcon } from '../Icon'
 import { useTranslation } from 'next-i18next'
 
-interface BuyTokenModalProps {
+export interface BuyTokenModalProps {
   isOpen: boolean
   closeModal: () => void
   buttons?: {

@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Presale } from './Presale'
 import React from 'react'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 
 export default {
-  title: '@web3chief/ui/Presale',
+  title: 'Presale',
   component: Presale,
 } as ComponentMeta<typeof Presale>
 

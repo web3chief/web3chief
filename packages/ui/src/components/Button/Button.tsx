@@ -1,8 +1,8 @@
 import { FC, forwardRef } from 'react'
 import { default as MuiButton, ButtonProps as MuiButtonProps } from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
-import { CircularProgress } from '@web3chief/ui/Icon/CircularProgress'
-import { Box } from '@web3chief/ui/Box'
+import { CircularProgress } from '../Icon/CircularProgress'
+import { Box } from '../Box'
 
 const AnimCircularProgress = styled(CircularProgress)`
   color: inherit;

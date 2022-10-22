@@ -1,15 +1,15 @@
 import { Typography } from '@mui/material'
-import { Dialog } from '@web3chief/ui/Dialog'
+import { Dialog } from '../Dialog'
 import { FC } from 'react'
-import { Box } from '@web3chief/ui/Box'
-import { TextField } from '@web3chief/ui/TextField'
+import { Box } from '../Box'
+import { TextField } from '../TextField'
 import Link from '@mui/material/Link'
-import { Button } from '@web3chief/ui/Button'
-import { DialogContent } from '@web3chief/ui/Dialog/DialogContent'
-import { DialogHeader } from '@web3chief/ui/Dialog/DialogHeader'
+import { Button } from '../Button'
+import { DialogContent } from '../Dialog/DialogContent'
+import { DialogHeader } from '../Dialog/DialogHeader'
 import { useTranslation } from 'next-i18next'
 
-interface ForgotPasswordProps {
+export interface ForgotPasswordProps {
   title: string
   descriptionAboutCode?: string
   securityCodeInput?: boolean

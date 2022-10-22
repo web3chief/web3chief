@@ -1,7 +1,7 @@
 import { FC, forwardRef } from 'react'
 import { default as MuiButton, ButtonProps as MuiButtonProps } from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 
 const StyledMuiButton = styled(MuiButton)(({ theme }) => ({
   color: theme.palette.text.primary,

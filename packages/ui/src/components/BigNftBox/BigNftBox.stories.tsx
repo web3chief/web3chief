@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 import BigNftBox from './BigNftBox'
 import SkeletonBigNftBox from './SkeletonBigNftBox'
 

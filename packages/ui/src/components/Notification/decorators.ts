@@ -1,5 +1,5 @@
 import { createActionAndEffect } from '@nimel/directorr'
-import { OptionsObject } from '@web3chief/ui/Snackbar'
+import { OptionsObject } from '../Snackbar'
 
 export type NotificationPayload = OptionsObject
 

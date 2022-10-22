@@ -1,11 +1,11 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 import React from 'react'
 import { News } from './News'
-import newsList from '@web3chief/ui/News/newsList.json'
+import newsList from '../News/newsList.json'
 
 export default {
-  title: '@web3chief/ui/News',
+  title: 'News',
   component: News,
 } as ComponentMeta<typeof News>
 

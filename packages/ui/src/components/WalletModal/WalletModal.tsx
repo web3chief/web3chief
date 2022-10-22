@@ -1,14 +1,14 @@
 import { FC } from 'react'
 import { Stack, Typography } from '@mui/material'
-import { Button } from '@web3chief/ui/Button'
-import { Box } from '@web3chief/ui/Box'
-import { ModalProps } from '@web3chief/ui/hooks/useModal'
-import { ConnectorConfig } from '@web3chief/sdk'
-import { Dialog } from '@web3chief/ui/Dialog'
-import { DialogHeader } from '@web3chief/ui/Dialog/DialogHeader'
-import { DialogContent } from '@web3chief/ui/Dialog/DialogContent'
+import { Button } from '../Button'
+import { Box } from '../Box'
+import { ModalProps } from '../../hooks/useModal'
+import { ConnectorConfig } from '../../../../sdk'
+import { Dialog } from '../Dialog'
+import { DialogHeader } from '../Dialog/DialogHeader'
+import { DialogContent } from '../Dialog/DialogContent'
 import { useTranslation } from 'next-i18next'
-import { WALLET_ICON_BY_CONNECTOR } from '@web3chief/ui/config/wallet'
+import { WALLET_ICON_BY_CONNECTOR } from '../../config/wallet'
 
 export type WalletModalProps = Pick<ModalProps, 'isOpen' | 'closeModal'> & {
   walletsData: ConnectorConfig[]

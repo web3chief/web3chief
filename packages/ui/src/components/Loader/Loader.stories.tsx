@@ -1,11 +1,11 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 import { Loader } from './Loader'
 import React from 'react'
 import { PendingLoader } from './PendingLoader'
 
 export default {
-  title: '@web3chief/ui/Loader',
+  title: 'Loader',
   component: Loader,
 } as ComponentMeta<typeof Loader>
 

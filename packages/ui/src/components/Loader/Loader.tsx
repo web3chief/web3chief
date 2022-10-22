@@ -1,5 +1,5 @@
 import { useTheme, keyframes } from '@mui/material'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 
 const loaderAnim = keyframes`
      0%{transform:rotate(0deg);}

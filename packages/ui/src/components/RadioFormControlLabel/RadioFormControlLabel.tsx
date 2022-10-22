@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { FormControlLabel } from '@mui/material'
 import { FormControlLabelProps } from '@mui/material/FormControlLabel/FormControlLabel'
-import { Radio } from '@web3chief/ui/Radio/Radio'
+import { Radio } from '../Radio/Radio'
 
 export type RadioFormControlLabelProps = Omit<FormControlLabelProps, 'control'>
 

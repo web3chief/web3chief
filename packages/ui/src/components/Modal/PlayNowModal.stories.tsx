@@ -1,13 +1,13 @@
-import { ComponentStory } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { PlayNowModal } from './PlayNowModal'
 import React from 'react'
-import { useModal } from '@web3chief/ui/hooks/useModal'
-import { buttonsPlayNow } from '@web3chief/ui/config/playNowModal'
+import { useModal } from '../../hooks/useModal'
+import { buttonsPlayNow } from '../../config/playNowModal'
 
 export default {
-  title: '@web3chief/ui/PlayNowModal',
+  title: 'PlayNowModal',
   component: PlayNowModal,
-}
+} as ComponentMeta<typeof PlayNowModal>
 
 const Template: ComponentStory<typeof PlayNowModal> = () => {
   const { isOpen, closeModal, openModal } = useModal(true)
@@ -20,4 +20,4 @@ const Template: ComponentStory<typeof PlayNowModal> = () => {
   )
 }
 
-export const DefaultPlayNowModal = Template.bind({})
+export const PlayNowModalExample = Template.bind({})

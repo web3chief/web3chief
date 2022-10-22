@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { ComponentStory } from '@storybook/react'
 import Typography, { TypographyProps } from '@mui/material/Typography'
-import { useBreakpoint } from '@web3chief/ui/hooks'
-import { Box } from '@web3chief/ui/Box'
+import { useBreakpoint } from '../../hooks'
+import { Box } from '../../components/Box'
 
 type TextBlockProps = {
   variant: TypographyProps['variant']

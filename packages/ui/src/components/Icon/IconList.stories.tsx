@@ -9,7 +9,7 @@ import { BinanceUsd } from './BinanceUsd'
 import { BnbIcon } from './BnbIcon'
 import { BnbWalletIcon } from './BnbWalletIcon'
 import { BorderIcon } from './BorderIcon'
-import { BoxIcon } from './BoxIcon2'
+import { BoxIcon2 } from './BoxIcon2'
 import { BurgerIcon } from './BurgerIcon'
 import { CircularProgress } from './CircularProgress'
 import { CloseIcon } from './CloseIcon'
@@ -55,22 +55,22 @@ import { UniswapIcon } from './UniswapIcon'
 import { WalletConnectIcon } from './WalletConnectIcon'
 import { WalletIcon } from './WalletIcon'
 import { WarningIcon } from './WarningIcon'
-import { ChevronRightIcon } from '@web3chief/ui/Icon/ChevronRightIcon'
-import { ChevronLeftIcon } from '@web3chief/ui/Icon/ChevronLeftIcon'
-import { UnlockIcon } from '@web3chief/ui/Icon/UnlockIcon'
-import { HeroIcon64 } from '@web3chief/ui/Icon/HeroIcon64'
-import { CornerAvatar } from '@web3chief/ui/Icon/CornerAvatar'
+import { ChevronRightIcon } from './ChevronRightIcon'
+import { ChevronLeftIcon } from './ChevronLeftIcon'
+import { UnlockIcon } from './UnlockIcon'
+import { HeroIcon64 } from './HeroIcon64'
+import { CornerAvatar } from './CornerAvatar'
 import { FilterIcon } from './FilterIcon'
-import { IconLinkOn } from '@web3chief/ui/Icon/IconLinkOn'
-import { SearchIcon } from '@web3chief/ui/Icon/SearchIcon'
-import { LockIcon } from '@web3chief/ui/Icon/LockIcon'
-import { LockIcon2 } from '@web3chief/ui/Icon/LockIcon2'
-import { LockIcon3 } from '@web3chief/ui/Icon/LockIcon3'
-import { AppleLogo } from '@web3chief/ui/Icon/AppleLogo'
-import { PlayMarketLogo } from '@web3chief/ui/Icon/PlayMarketLogo'
+import { IconLinkOn } from './IconLinkOn'
+import { SearchIcon } from './SearchIcon'
+import { LockIcon } from './LockIcon'
+import { LockIcon2 } from './LockIcon2'
+import { LockIcon3 } from './LockIcon3'
+import { AppleLogo } from './AppleLogo'
+import { PlayMarketLogo } from './PlayMarketLogo'
 
 export default {
-  title: '@web3chief/ui/Icon',
+  title: './Icon',
 }
 
 const Template = () => (
@@ -143,10 +143,10 @@ const Template = () => (
 
         <TableRow>
           <TableCell align='center'>
-            <BoxIcon fontSize='xxlarge' />
+            <BoxIcon2 fontSize='xxlarge' />
           </TableCell>
 
-          <TableCell align='center'>BoxIcon</TableCell>
+          <TableCell align='center'>BoxIcon2</TableCell>
         </TableRow>
 
         <TableRow>

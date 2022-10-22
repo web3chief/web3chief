@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import { Box, BoxProps } from '@web3chief/ui/Box'
+import { Box, BoxProps } from '../Box'
 import { Typography } from '@mui/material'
-import Timer from '@web3chief/ui/Timer'
+import Timer from '../Timer'
 
 export type PresaleProps = Pick<BoxProps, 'background' | 'height'> & {
   title: string

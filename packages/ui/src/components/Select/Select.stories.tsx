@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Stack, Typography } from '@mui/material'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../Box'
 import SelectCustom from './Select'
 
 export default {
-  title: '@web3chief/ui/Select',
+  title: 'Select',
   component: SelectCustom,
   argTypes: { onClick: { action: 'onClick' } },
 } as ComponentMeta<typeof SelectCustom>

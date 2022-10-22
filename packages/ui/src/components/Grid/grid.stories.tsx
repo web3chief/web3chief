@@ -3,7 +3,7 @@ import { ComponentStory } from '@storybook/react'
 import { Grid } from '.'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { useBreakpoint } from '@web3chief/ui/hooks'
+import { useBreakpoint } from '../../hooks'
 
 const GridContainer: FC = () => {
   const breakpoint = useBreakpoint()
@@ -62,7 +62,7 @@ const GridContainer: FC = () => {
 }
 
 export default {
-  title: '@web3chief/ui/Grid',
+  title: '../Grid',
   component: Grid,
 }
 

@@ -1,12 +1,12 @@
 import { Typography } from '@mui/material'
 import { Dialog } from '../Dialog'
-import { ModalProps } from '@web3chief/ui/hooks/useModal'
+import { ModalProps } from '../../hooks/useModal'
 import { FC } from 'react'
-import { DialogHeader } from '@web3chief/ui/Dialog/DialogHeader'
-import { DialogContent } from '@web3chief/ui/Dialog/DialogContent'
-import { Button } from '@web3chief/ui/Button'
+import { DialogHeader } from '../Dialog/DialogHeader'
+import { DialogContent } from '../Dialog/DialogContent'
+import { Button } from '../Button'
 
-interface BaseModalProps {
+export interface BaseModalProps {
   text: string
   textButton: string
   title: string

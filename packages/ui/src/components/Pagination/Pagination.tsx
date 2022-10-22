@@ -5,8 +5,7 @@ import {
   PaginationProps as MuiPaginationProps,
 } from '@mui/material/Pagination'
 import { PaginationItem } from '@mui/material'
-import { ChevronRightIcon } from '@web3chief/ui/Icon/ChevronRightIcon'
-import { ChevronLeftIcon } from '@web3chief/ui/Icon/ChevronLeftIcon'
+import { ChevronRightIcon, ChevronLeftIcon } from '../Icon'
 
 export const Pagination: FC<MuiPaginationProps> = props => (
   <MuiPagination
