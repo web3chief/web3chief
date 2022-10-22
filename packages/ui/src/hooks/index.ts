@@ -1,2 +1,7 @@
 export * from './useModal'
 export * from './useBreakpoint'
+export * from './useCopyClipboard'
+export * from './usePagination'
+export * from './useSquareicon'
+export * from './useWindowDimension'
+export * from './historyContext'

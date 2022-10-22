@@ -1,6 +1,4 @@
-import { AppleLogo } from '@web3chief/ui/Icon/AppleLogo'
-import { PlayMarketLogo } from '@web3chief/ui/Icon/PlayMarketLogo'
-// import { DOWNLOAD_URL } from './urls'
+import { AppleLogo, PlayMarketLogo} from '../components/Icon'
 
 export const buttonsPlayNow = [
   {
