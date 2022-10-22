@@ -12,6 +12,7 @@ import replace from '@rollup/plugin-replace'
 import del from 'rollup-plugin-delete'
 import externals from 'rollup-plugin-node-externals'
 import svg from 'rollup-plugin-svg'
+import url from 'rollup-plugin-url'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
@@ -32,6 +33,10 @@ export default [
         plugins: [
             json({ compact: true }),
             svg(),
+            url({
+                include: ['**/*.woff', '**/*.woff2'],
+                limit: Infinity,
+            }),
             externals(),
             nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'], preferBuiltins: true }),
             commonjs({ ignoreGlobal: true, include: ['node_modules/**'], extensions: ['.js', '.json'] }),
