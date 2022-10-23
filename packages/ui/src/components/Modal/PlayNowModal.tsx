@@ -7,7 +7,6 @@ import { DialogHeader } from '../Dialog/DialogHeader'
 import { DialogContent } from '../Dialog/DialogContent'
 import { Tooltip } from '../Tooltip'
 import { DefaultTooltipBody } from '../Tooltip/Bodyes/DefaultTooltipBody'
-import { useTranslation } from 'next-i18next'
 
 export interface ButtonPlayNowModalProps {
   icon: ReactNode
@@ -23,6 +22,7 @@ export interface PlayNowModalProps {
   texts?: {
     title?: string
     description?: string
+    tooltip?: string
   }
 }
 
@@ -48,16 +48,15 @@ const ButtonModal = (button: ButtonPlayNowModalProps) => (
 )
 
 export const PlayNowModal: FC<PlayNowModalProps> = ({ closeModal, isOpen, buttons, texts }) => {
-  const { t } = useTranslation('common')
-  const { title, description } = texts || {}
+  const { title, description, tooltip } = texts || {}
 
   return (
     <Dialog onClose={closeModal} open={isOpen}>
-      <DialogHeader onClose={closeModal} title={title || `${t('Play now')}!`} />
+      <DialogHeader onClose={closeModal} title={title || 'Play now!'} />
       <DialogContent>
         <Box>
           <Typography variant='subtitle1' color='text.secondary'>
-            {description || t('To play the game download the app.')}
+            {description || 'To play the game download the app.'}
           </Typography>
         </Box>
         <Box mt={4} paddingBottom={4}>
@@ -71,7 +70,7 @@ export const PlayNowModal: FC<PlayNowModalProps> = ({ closeModal, isOpen, button
                   followCursor
                 >
                   <DefaultTooltipBody
-                    title={`${t('Coming Soon')}!`}
+                    title={tooltip || 'Coming Soon!'}
                     variant='menu'
                     boxProps={{
                       padding: '18px 16px',

@@ -7,8 +7,6 @@ import { Button } from '../Button'
 import { MetamaskIcon } from '../Icon/MetamaskIcon'
 import { DialogContent } from '../Dialog/DialogContent'
 import { DialogHeader } from '../Dialog/DialogHeader'
-import { useTranslation } from 'next-i18next'
-
 
 export type NonConnectorModalProps = Pick<ModalProps, 'isOpen' | 'closeModal'> &
 {
@@ -24,7 +22,6 @@ export const NonConnectorModal: FC<NonConnectorModalProps> = ({
   texts,
   links
 }) => {
-  const { t } = useTranslation('common')
   const { walletNotInstalled, actionToInstall } = texts || {}
 
   return (
@@ -34,10 +31,10 @@ export const NonConnectorModal: FC<NonConnectorModalProps> = ({
         <Box textAlign='center' alignItems='center'>
           <MetamaskIcon fontSize='xxlarge' />
           <Typography variant='modalTitle' mt={2}>
-            {walletNotInstalled || t('Metamask is not installed')}
+            {walletNotInstalled || 'Metamask is not installed'}
           </Typography>
           <Typography mt={2} variant='subtitle1' color='text.secondary'>
-            {actionToInstall || t('To continue please install Metamask extension in your browser:')}
+            {actionToInstall || 'To continue please install Metamask extension in your browser:'}
           </Typography>
           <Box width='100%' flexDirection='row' gap={1} mt={4}>
             {links.map(button => (

@@ -1,7 +1,6 @@
 import { InputAdornment, Typography } from '@mui/material'
 import { Box } from '../../Box'
 import { Button } from '../../Button'
-import { useTranslation } from 'next-i18next'
 import { ImageFallback } from '../../Image'
 import { FC } from 'react'
 import TextMaskInput, { TextMaskInputProps } from '../InputMask/InputMask'
@@ -26,7 +25,6 @@ export const TokenInput: FC<TokenInputProps> = ({
   texts,
   ...args
 }) => {
-  const { t } = useTranslation('common')
   const { availableText, max } = texts || {}
 
   return (
@@ -47,10 +45,10 @@ export const TokenInput: FC<TokenInputProps> = ({
       />
       <Box mt={1.5} flexDirection='row' alignItems='center' justifyContent='space-between'>
         <Typography variant='subtitle3' color='text.secondary'>
-          {availableText || t('Available')}: {available}
+          {availableText || 'Available'}: {available}
         </Typography>
         <Button onClick={handleMaxValue} size='xsmall' variant='base'>
-          {max || t('MAX')}
+          {max || 'MAX'}
         </Button>
       </Box>
     </>

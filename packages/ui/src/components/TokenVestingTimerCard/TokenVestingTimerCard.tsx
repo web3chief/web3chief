@@ -1,6 +1,5 @@
 import { Typography } from '@mui/material'
 import { Box } from '../Box'
-import { useTranslation } from 'next-i18next'
 import { FC } from 'react'
 
 export type TokenVestingTimerCardProps = {
@@ -19,7 +18,6 @@ export const TokenVestingTimerCard: FC<TokenVestingTimerCardProps> = ({
   progress,
   texts
 }) => {
-  const { t } = useTranslation('tokenVesting')
   const { sideFront, sideBack } = texts || {}
 
   return (
@@ -58,7 +56,7 @@ export const TokenVestingTimerCard: FC<TokenVestingTimerCardProps> = ({
           sx={{ backfaceVisibility: 'hidden' }}
         >
           <Typography color='text.secondary' variant='subtitle2alt'>
-            {sideFront || t('Your vesting stage')}
+            {sideFront || 'Your vesting stage'}
           </Typography>
           <Typography variant='h4'>{value}</Typography>
           <Box bottom={0} left={0} width='100%' position='absolute' height='4px' bgcolor='alpha.8'>
@@ -89,7 +87,7 @@ export const TokenVestingTimerCard: FC<TokenVestingTimerCardProps> = ({
           sx={{ backfaceVisibility: 'hidden' }}
         >
           <Typography color='text.secondary' variant='subtitle2alt'>
-            {sideBack || t('Your vesting stage')}
+            {sideBack || 'Your vesting stage'}
           </Typography>
           <Typography variant='h4'>{time}</Typography>
           <Box bottom={0} left={0} width='100%' position='absolute' height='4px' bgcolor='alpha.8'>

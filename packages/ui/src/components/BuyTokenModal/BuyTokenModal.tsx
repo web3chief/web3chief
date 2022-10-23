@@ -8,7 +8,6 @@ import { BinanceChainIcon } from '../Icon/'
 import { DialogHeader } from '../Dialog/DialogHeader'
 import { DialogContent } from '../Dialog/DialogContent'
 import { PancakeIcon } from '../Icon'
-import { useTranslation } from 'next-i18next'
 
 export interface BuyTokenModalProps {
   isOpen: boolean
@@ -52,7 +51,6 @@ export const BuyTokenModal: FC<BuyTokenModalProps> = ({
   links = linkList,
   texts,
 }) => {
-  const { t } = useTranslation('common')
   const {
     title,
     howToBuy,
@@ -61,7 +59,7 @@ export const BuyTokenModal: FC<BuyTokenModalProps> = ({
   } = texts || {}
   return (
     <Dialog onClose={closeModal} open={isOpen}>
-      <DialogHeader title={title || t('BUY NOW!')} onClose={closeModal} />
+      <DialogHeader title={title || 'BUY NOW!'} onClose={closeModal} />
       <DialogContent>
         <Box mt={2}>
           <Stack spacing={1} paddingBottom={4} borderBottom='1px solid rgba(255, 255, 255, 0.12)'>
@@ -83,22 +81,22 @@ export const BuyTokenModal: FC<BuyTokenModalProps> = ({
             ))}
             <Box pt={2} width='fit-content'>
               <Link href='' variant='subtitle2'>
-                {howToBuy || t('How to buy TOKEN')}
+                {howToBuy || 'How to buy TOKEN'}
               </Link>
             </Box>
           </Stack>
           <Box paddingBottom={2}>
             <Typography mt={2} variant='subtitle2' color='text.secondary'>
-              {feeNote || t(
-                'All related gas fees are paid in BNB. The amount depends on the speed of the transaction.',
-              )}
+              {feeNote ||
+                'All related gas fees are paid in BNB. The amount depends on the speed of the transaction.'
+              }
             </Typography>
           </Box>
         </Box>
         <Box alignItems='center' flexDirection='row'>
           <BinanceChainIcon fontSize='small' />{' '}
           <Typography variant='subtitle2' color='text.secondary' ml={1}>
-            {buyToken || t('Buy BNB on')}
+            {buyToken || 'Buy BNB on'}
           </Typography>
           {links.map(link => (
             <Link key={link.name} href={link.link} variant='subtitle2' ml={1}>

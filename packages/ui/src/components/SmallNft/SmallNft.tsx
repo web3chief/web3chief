@@ -3,7 +3,6 @@ import { Box } from '../Box'
 import { Tooltip } from '../Tooltip'
 import { Typography } from '@mui/material'
 import { ImageFallback } from '../Image'
-import { useTranslation } from 'next-i18next'
 
 export interface SmallNftProps {
   standard: string
@@ -11,8 +10,6 @@ export interface SmallNftProps {
   description?: string
 }
 const SmallNft: React.FC<SmallNftProps> = ({ standard, image, description }) => {
-  const { t } = useTranslation('common')
-
   return (
     <Box
       position='relative'
@@ -31,9 +28,9 @@ const SmallNft: React.FC<SmallNftProps> = ({ standard, image, description }) => 
         zIndex={2}
       >
         <Tooltip fontSize='xxsmall'>
-          {description || t(
-            'ERC-1155 — а standard interface for contracts that manage multiple token types. A single deployed contract may include any combination of fungible tokens, non-fungible tokens or other configurations (e.g. semi-fungible tokens).',
-          )}
+          {description ||
+            'ERC-1155 — а standard interface for contracts that manage multiple token types. A single deployed contract may include any combination of fungible tokens, non-fungible tokens or other configurations (e.g. semi-fungible tokens).'
+          }
         </Tooltip>
         <Typography ml={0.8} color='text.primary' variant='subtitle4alt'>
           {standard}

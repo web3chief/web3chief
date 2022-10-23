@@ -15,7 +15,6 @@ import { DialogHeader } from '../Dialog/DialogHeader'
 import { DialogContent } from '../Dialog/DialogContent'
 import { IconButton } from '../Button'
 import { Box } from '../Box'
-import { useTranslation } from 'next-i18next'
 
 const initialValues = {
   email: '',
@@ -28,8 +27,6 @@ export interface SignInProps {
 }
 
 export const SignIn: FC<SignInProps> = ({ isOpen, closeModal }) => {
-  const { t } = useTranslation('common')
-
   const [passwordShow, setPassworShow] = useState(false)
 
   const validationSchema = useMemo(
@@ -37,16 +34,16 @@ export const SignIn: FC<SignInProps> = ({ isOpen, closeModal }) => {
       yup.object({
         email: yup
           .string()
-          .default(t('Enter your email'))
-          .email(t('Enter a valid email'))
-          .required(t('Email is required')),
+          .default('Enter your email')
+          .email('Enter a valid email')
+          .required('Email is required'),
         password: yup
           .string()
-          .default(t('Enter your password'))
-          .min(8, t('Minimum 8 characters length'))
-          .required(t('Password is required')),
+          .default('Enter your password')
+          .min(8, 'Minimum 8 characters length')
+          .required('Password is required'),
       }),
-    [t],
+    [],
   )
 
   const { handleSubmit, values, handleChange, touched, errors } = useFormik({
@@ -59,15 +56,15 @@ export const SignIn: FC<SignInProps> = ({ isOpen, closeModal }) => {
 
   return (
     <Dialog onClose={closeModal} open={isOpen}>
-      <DialogHeader onClose={closeModal} title={t('Sign in')} />
+      <DialogHeader onClose={closeModal} title='Sign in' />
       <DialogContent>
         <Alert variant='success'>example Alert</Alert>
         <form onSubmit={handleSubmit}>
           <Box mt={3}>
-            <FormHelperText>{t('Email')}</FormHelperText>
+            <FormHelperText>Email</FormHelperText>
             <TextField
               name='email'
-              placeholder={t('Enter email')}
+              placeholder='Enter email'
               fullWidth
               value={values.email}
               onChange={handleChange}
@@ -76,9 +73,9 @@ export const SignIn: FC<SignInProps> = ({ isOpen, closeModal }) => {
             />
           </Box>
           <Box mt={2}>
-            <FormHelperText>{t('Password')}</FormHelperText>
+            <FormHelperText>Password</FormHelperText>
             <TextField
-              placeholder={t('Enter password')}
+              placeholder='Enter password'
               name='password'
               fullWidth
               type={passwordShow ? 'text' : 'password'}
@@ -101,25 +98,25 @@ export const SignIn: FC<SignInProps> = ({ isOpen, closeModal }) => {
           </Box>
           <Box mt={1}>
             <Link component='button' href='#'>
-              {t('Forgot Password')}
+              Forgot Password
             </Link>
           </Box>
           <Box mt={4}>
             <Button size='large' variant='contained' fullWidth type='submit'>
-              {t('Sign in')}
+              Sign in
             </Button>
           </Box>
         </form>
 
         <Typography color='text.secondary' mt={2} align='center' variant='subtitle1'>
-          {t('or')}
+          or
         </Typography>
         <Box mt={2}>
           <Button size='large' color='primary' fullWidth>
             <Box flexDirection='row' width='100%' justifyContent='space-between'>
               <WalletIcon />
               <Typography variant='buttonBig' width='100%' textAlign='center'>
-                {t('Login with Wallet')}
+                Login with Wallet
               </Typography>
             </Box>
           </Button>
@@ -129,17 +126,17 @@ export const SignIn: FC<SignInProps> = ({ isOpen, closeModal }) => {
             <Box display='flex' flexDirection='row' width='100%' justifyContent='space-between'>
               <KeyIcon />
               <Typography variant='buttonBig' width='100%' textAlign='center'>
-                {t('Login with private key')}
+                Login with private key
               </Typography>
             </Box>
           </Button>
         </Box>
         <Box flexDirection='row' mt={3} alignItems='baseline'>
           <Typography color='text.secondary' variant='subtitle2'>
-            {t('Don’t have an account?')}
+            Don’t have an account?
           </Typography>
           <Box ml={1}>
-            <Link component='button'>{t('Sign Up')}</Link>
+            <Link component='button'>Sign Up</Link>
           </Box>
         </Box>
       </DialogContent>

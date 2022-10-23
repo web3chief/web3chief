@@ -4,7 +4,6 @@ import Typography from '@mui/material/Typography'
 import useTimer from './useTimer'
 import { useTheme } from '@mui/material'
 import { Skeleton } from '../Skeleton'
-import { useTranslation } from 'next-i18next'
 
 export type TimerProps = {
   startTimestamp?: number
@@ -19,7 +18,6 @@ export type TimerProps = {
 }
 
 const Timer = ({ startTimestamp, endTimestamp, loading, texts }: TimerProps) => {
-  const { t } = useTranslation('ino')
   const { hours, minutes, secondas, hurryUp } = texts || {}
   const theme = useTheme()
 
@@ -27,15 +25,15 @@ const Timer = ({ startTimestamp, endTimestamp, loading, texts }: TimerProps) => 
 
   const time = [
     {
-      title: hours || t('hours'),
+      title: hours || 'hours',
       value: totalTime.hoursWithoutDays,
     },
     {
-      title: minutes || t('minutes'),
+      title: minutes || 'minutes',
       value: totalTime.minutes,
     },
     {
-      title: secondas || t('seconds'),
+      title: secondas || 'seconds',
       value: totalTime.seconds,
     },
   ]
@@ -86,7 +84,7 @@ const Timer = ({ startTimestamp, endTimestamp, loading, texts }: TimerProps) => 
                 borderRadius='2px'
               >
                 <Typography variant='timersubtitle' color='text.altPrimary' whiteSpace='nowrap'>
-                  {hurryUp || t('Hurry up to buy!')}
+                  {hurryUp || 'Hurry up to buy!'}
                 </Typography>
               </Box>
             )}

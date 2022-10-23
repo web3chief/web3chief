@@ -7,7 +7,6 @@ import Link from '@mui/material/Link'
 import { Button } from '../Button'
 import { DialogContent } from '../Dialog/DialogContent'
 import { DialogHeader } from '../Dialog/DialogHeader'
-import { useTranslation } from 'next-i18next'
 
 export interface ForgotPasswordProps {
   title: string
@@ -52,7 +51,6 @@ export const ForgotPassword: FC<ForgotPasswordProps> = ({
   isOpen,
   texts,
 }) => {
-  const { t } = useTranslation('common')
   const { email: emailText, securityCode, securityInputPlaceHolder } = texts || {}
 
   return (
@@ -67,7 +65,7 @@ export const ForgotPassword: FC<ForgotPasswordProps> = ({
 
         {email && (
           <Typography display='flex' variant='subtitle1' color='text.secondary' mt={2}>
-            {emailText || t('Email')}:{' '}
+            {emailText || 'Email'}:{' '}
             <Typography variant='subtitle1' color='text.primary'>
               {email}
             </Typography>
@@ -79,11 +77,11 @@ export const ForgotPassword: FC<ForgotPasswordProps> = ({
             <>
               {' '}
               <Typography variant='subtitle3' color='text.primary'>
-                {securityCode || t('Security code')}
+                {securityCode || 'Security code'}
               </Typography>
               <TextField
                 size='medium'
-                placeholder={securityInputPlaceHolder || t('Enter security code')}
+                placeholder={securityInputPlaceHolder || 'Enter security code'}
                 name='password'
                 fullWidth
                 value=''

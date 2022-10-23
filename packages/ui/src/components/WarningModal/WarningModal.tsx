@@ -5,7 +5,6 @@ import { FC, ReactNode } from 'react'
 import { Box } from '../Box'
 import { DialogHeader } from '../Dialog/DialogHeader'
 import { DialogContent } from '../Dialog/DialogContent'
-import { useTranslation } from 'next-i18next'
 
 export interface WarningModalProps {
   text?: string
@@ -22,7 +21,6 @@ export const WarningModal: FC<Pick<ModalProps, 'isOpen' | 'closeModal'> & Warnin
   title,
   contentVariant = 'subtitle1',
 }) => {
-  const { t } = useTranslation('common')
 
   return (
     <Dialog onClose={closeModal} open={isOpen}>
@@ -45,7 +43,7 @@ export const WarningModal: FC<Pick<ModalProps, 'isOpen' | 'closeModal'> & Warnin
           ></Box>
           <Typography variant='modalTitle'>{title || 'Wrong Network'}</Typography>
           <Typography color='text.secondary' mt={2} variant={contentVariant}>
-            {text || t('Please change Metamasks network to the Main network to continue!')}
+            {text || 'Please change Metamasks network to the Main network to continue!'}
           </Typography>
           <Stack mt={4} gap={1}>
             {buttons?.map((button, i) => (

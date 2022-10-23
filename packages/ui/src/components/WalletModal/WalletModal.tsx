@@ -7,7 +7,6 @@ import { ConnectorConfig } from '../../../../sdk'
 import { Dialog } from '../Dialog'
 import { DialogHeader } from '../Dialog/DialogHeader'
 import { DialogContent } from '../Dialog/DialogContent'
-import { useTranslation } from 'next-i18next'
 import { WALLET_ICON_BY_CONNECTOR } from '../../config/wallet'
 
 export type WalletModalProps = Pick<ModalProps, 'isOpen' | 'closeModal'> & {
@@ -23,11 +22,9 @@ export const WalletModal: FC<WalletModalProps> = ({
   onClickWallet,
   title
 }) => {
-  const { t } = useTranslation('common')
-
   return (
     <Dialog onClose={closeModal} open={isOpen}>
-      <DialogHeader onClose={closeModal} title={title || t('Connect wallet')} />
+      <DialogHeader onClose={closeModal} title={title || 'Connect wallet'} />
       <DialogContent>
         <Stack spacing={1}>
           {walletsData.map(data => {
