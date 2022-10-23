@@ -27,13 +27,6 @@ const Template: ComponentStory<typeof WarningModal> = () => {
   return (
     <>
       <button onClick={openModal}>OpenModal</button>
-      {/* <Box sx={{ display: 'flex', padding: '25px' }}>
-        <WarningModal
-          onClickFirst={() => console.log('click')}
-          closeModal={closeModal}
-          isOpen={isOpen}
-        />
-      </Box> */}
       <Box sx={{ display: 'flex', padding: '25px' }}>
         <WarningModal
           contentVariant='text.secondary'

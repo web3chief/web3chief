@@ -9,14 +9,24 @@ export type TokenVestingBoardProps = {
   totalValue: string | number
   token: string
   currentValue: string
+  handleClaim: () => void | Promise<void>
+  texts?: {
+    canClaim?: string
+    claim?: string
+    nextStage?: string
+    totalRaised?: string
+  }
 }
 
 export const TokenVestingBoard: FC<TokenVestingBoardProps> = ({
   totalValue,
   token,
   currentValue,
+  handleClaim,
+  texts
 }) => {
   const { t } = useTranslation('tokenVesting')
+  const { canClaim, claim, nextStage, totalRaised } = texts || {}
 
   return (
     <Box p={3} bgcolor='alpha.5' borderRadius='16px'>
@@ -26,18 +36,18 @@ export const TokenVestingBoard: FC<TokenVestingBoardProps> = ({
           alignItems='center'
           justifyContent='space-between'
         >
-          <Typography variant='h4'>{t('You can claim tokens')}</Typography>
+          <Typography variant='h4'>{canClaim || t('You can claim tokens')}</Typography>
           <Box mt={{ xs: 3, lg: 0 }}>
-            <Button variant='contained' size='large'>
-              {t('Claim tokens')}
+            <Button onClick={handleClaim} variant='contained' size='large'>
+              {claim || t('Claim tokens')}
             </Button>
           </Box>
         </Box>
         <Box mt={10}>
-          <SliderBold labelTitle={t('To next stage')} labelValue={currentValue} value={50} />
+          <SliderBold labelTitle={nextStage || t('To next stage')} labelValue={currentValue} value={50} />
           <Box flexDirection='row' justifyContent='flex-end'>
             <Box alignItems='flex-end'>
-              <Typography variant='subtitle2alt'>{t('Total raised')}</Typography>
+              <Typography variant='subtitle2alt'>{totalRaised || t('Total raised')}</Typography>
               <Typography variant='h8' color='text.secondary'>
                 {`${totalValue} ${token}`}
               </Typography>

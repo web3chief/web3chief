@@ -31,6 +31,11 @@ export interface ForgotPasswordProps {
   }
   closeModal: () => void
   isOpen: boolean
+  texts?: {
+    email?: string
+    securityCode?: string
+    securityInputPlaceHolder?: string
+  }
 }
 
 export const ForgotPassword: FC<ForgotPasswordProps> = ({
@@ -45,8 +50,10 @@ export const ForgotPassword: FC<ForgotPasswordProps> = ({
   signUpControl,
   closeModal,
   isOpen,
+  texts,
 }) => {
   const { t } = useTranslation('common')
+  const { email: emailText, securityCode, securityInputPlaceHolder } = texts || {}
 
   return (
     <Dialog onClose={closeModal} open={isOpen}>
@@ -60,7 +67,7 @@ export const ForgotPassword: FC<ForgotPasswordProps> = ({
 
         {email && (
           <Typography display='flex' variant='subtitle1' color='text.secondary' mt={2}>
-            {t('Email')}:{' '}
+            {emailText || t('Email')}:{' '}
             <Typography variant='subtitle1' color='text.primary'>
               {email}
             </Typography>
@@ -72,11 +79,11 @@ export const ForgotPassword: FC<ForgotPasswordProps> = ({
             <>
               {' '}
               <Typography variant='subtitle3' color='text.primary'>
-                {t('Security code')}
+                {securityCode || t('Security code')}
               </Typography>
               <TextField
                 size='medium'
-                placeholder={t('Enter security code')}
+                placeholder={securityInputPlaceHolder || t('Enter security code')}
                 name='password'
                 fullWidth
                 value=''

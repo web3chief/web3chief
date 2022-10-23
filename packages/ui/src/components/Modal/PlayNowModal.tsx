@@ -20,6 +20,10 @@ export interface PlayNowModalProps {
   isOpen: boolean
   closeModal: () => void
   buttons: ButtonPlayNowModalProps[]
+  texts?: {
+    title?: string
+    description?: string
+  }
 }
 
 const ButtonModal = (button: ButtonPlayNowModalProps) => (
@@ -29,8 +33,8 @@ const ButtonModal = (button: ButtonPlayNowModalProps) => (
     onClick={
       !button.comingSoon
         ? () => {
-            window.open(button.link, '_blank')
-          }
+          window.open(button.link, '_blank')
+        }
         : () => null
     }
   >
@@ -43,16 +47,17 @@ const ButtonModal = (button: ButtonPlayNowModalProps) => (
   </Button>
 )
 
-export const PlayNowModal: FC<PlayNowModalProps> = ({ closeModal, isOpen, buttons }) => {
+export const PlayNowModal: FC<PlayNowModalProps> = ({ closeModal, isOpen, buttons, texts }) => {
   const { t } = useTranslation('common')
+  const { title, description } = texts || {}
 
   return (
     <Dialog onClose={closeModal} open={isOpen}>
-      <DialogHeader onClose={closeModal} title={`${t('Play now')}!`} />
+      <DialogHeader onClose={closeModal} title={title || `${t('Play now')}!`} />
       <DialogContent>
         <Box>
           <Typography variant='subtitle1' color='text.secondary'>
-            {t('To play the game download the app.')}
+            {description || t('To play the game download the app.')}
           </Typography>
         </Box>
         <Box mt={4} paddingBottom={4}>

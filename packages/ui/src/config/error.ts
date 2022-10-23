@@ -1,4 +1,4 @@
-import { ErrorCode as ErrorCodeSDK } from '@web3chief/sdk'
+import { ErrorCode as ErrorCodeSDK } from '../../../sdk'
 
 export const CODE_ERROR = {
   unknown: '0',

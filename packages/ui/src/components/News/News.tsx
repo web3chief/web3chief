@@ -11,17 +11,22 @@ import { useTranslation } from 'next-i18next'
 
 export type NewsProps = {
   newsArray: NewsBannerProps[]
+  texts?: {
+    showMore?: string
+    latestNews?: string
+  }
 }
 
-export const News: FC<NewsProps> = ({ newsArray }) => {
+export const News: FC<NewsProps> = ({ newsArray, texts }) => {
   const { t } = useTranslation('common')
+  const { showMore, latestNews } = texts || {}
 
   const BtnShowMore = (props: BoxProps) => (
     /*  <Link href={MEDIUM_URL} passHref>
       <a target='_blank'> */
     <Box {...props} mt={{ xs: 2, md: 0 }}>
       <Button color='primary' endIcon={<ArrowRightIcon />}>
-        {t('Show more')}
+        {showMore || t('Show more')}
       </Button>
     </Box>
     /* </a>
@@ -36,7 +41,7 @@ export const News: FC<NewsProps> = ({ newsArray }) => {
         flexDirection='row'
         mb={{ sm: 3, xs: 2 }}
       >
-        <Typography variant='h3'>{t('Latest News')}</Typography>
+        <Typography variant='h3'>{latestNews || t('Latest News')}</Typography>
         <BtnShowMore display={{ xs: 'none', md: 'flex' }} />
       </Box>
       <Grid

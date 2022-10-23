@@ -8,9 +8,9 @@ import { useTranslation } from 'next-i18next'
 export interface SmallNftProps {
   standard: string
   image: string
-  background?: string
+  description?: string
 }
-const SmallNft: React.FC<SmallNftProps> = ({ standard, image }) => {
+const SmallNft: React.FC<SmallNftProps> = ({ standard, image, description }) => {
   const { t } = useTranslation('common')
 
   return (
@@ -31,7 +31,7 @@ const SmallNft: React.FC<SmallNftProps> = ({ standard, image }) => {
         zIndex={2}
       >
         <Tooltip fontSize='xxsmall'>
-          {t(
+          {description || t(
             'ERC-1155 — а standard interface for contracts that manage multiple token types. A single deployed contract may include any combination of fungible tokens, non-fungible tokens or other configurations (e.g. semi-fungible tokens).',
           )}
         </Tooltip>

@@ -47,7 +47,6 @@ export const Presale: FC<PresaleProps> = ({ title, description, timer, loading }
           left={{ sm: -12, md: -35, lg: 0 }}
         >
           <Box
-            // background='url(/img/ino-warrior2.png) no-repeat center bottom / contain'
             height='100%'
             width='100%'
             position='absolute'
@@ -57,10 +56,6 @@ export const Presale: FC<PresaleProps> = ({ title, description, timer, loading }
           />
           <Box
             mixBlendMode='lighten'
-            // background={{
-            //   xs: 'url(/img/fire-ino-md.png) no-repeat left bottom / contain',
-            //   md: 'url(/img/fire-ino-lg.png) no-repeat center top / contain',
-            // }}
             height='100%'
             width='100%'
             position='absolute'

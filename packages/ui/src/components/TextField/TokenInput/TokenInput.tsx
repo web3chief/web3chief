@@ -11,6 +11,10 @@ export type TokenInputProps = TextMaskInputProps & {
   available: string
   handleMaxValue: () => void
   value: string
+  texts?: {
+    availableText?: string
+    max?: string
+  }
 }
 
 export const TokenInput: FC<TokenInputProps> = ({
@@ -19,9 +23,11 @@ export const TokenInput: FC<TokenInputProps> = ({
   available,
   scale,
   mask = Number,
+  texts,
   ...args
 }) => {
   const { t } = useTranslation('common')
+  const { availableText, max } = texts || {}
 
   return (
     <>
@@ -41,10 +47,10 @@ export const TokenInput: FC<TokenInputProps> = ({
       />
       <Box mt={1.5} flexDirection='row' alignItems='center' justifyContent='space-between'>
         <Typography variant='subtitle3' color='text.secondary'>
-          {t('Available')}: {available}
+          {availableText || t('Available')}: {available}
         </Typography>
         <Button onClick={handleMaxValue} size='xsmall' variant='base'>
-          {t('MAX')}
+          {max || t('MAX')}
         </Button>
       </Box>
     </>

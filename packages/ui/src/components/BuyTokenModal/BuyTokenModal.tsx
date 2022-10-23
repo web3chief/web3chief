@@ -22,6 +22,12 @@ export interface BuyTokenModalProps {
     name: string
     link: string
   }[]
+  texts?: {
+    title?: string
+    howToBuy?: string
+    feeNote?: string
+    buyToken?: string
+  }
 }
 
 const linkList = [
@@ -44,12 +50,18 @@ export const BuyTokenModal: FC<BuyTokenModalProps> = ({
   isOpen,
   buttons = buttonList,
   links = linkList,
+  texts,
 }) => {
   const { t } = useTranslation('common')
-
+  const {
+    title,
+    howToBuy,
+    feeNote,
+    buyToken
+  } = texts || {}
   return (
     <Dialog onClose={closeModal} open={isOpen}>
-      <DialogHeader title={t('BUY NOW!')} onClose={closeModal} />
+      <DialogHeader title={title || t('BUY NOW!')} onClose={closeModal} />
       <DialogContent>
         <Box mt={2}>
           <Stack spacing={1} paddingBottom={4} borderBottom='1px solid rgba(255, 255, 255, 0.12)'>
@@ -71,13 +83,13 @@ export const BuyTokenModal: FC<BuyTokenModalProps> = ({
             ))}
             <Box pt={2} width='fit-content'>
               <Link href='' variant='subtitle2'>
-                {t('How to buy TOKEN')}
+                {howToBuy || t('How to buy TOKEN')}
               </Link>
             </Box>
           </Stack>
           <Box paddingBottom={2}>
             <Typography mt={2} variant='subtitle2' color='text.secondary'>
-              {t(
+              {feeNote || t(
                 'All related gas fees are paid in BNB. The amount depends on the speed of the transaction.',
               )}
             </Typography>
@@ -86,7 +98,7 @@ export const BuyTokenModal: FC<BuyTokenModalProps> = ({
         <Box alignItems='center' flexDirection='row'>
           <BinanceChainIcon fontSize='small' />{' '}
           <Typography variant='subtitle2' color='text.secondary' ml={1}>
-            {t('Buy BNB on')}
+            {buyToken || t('Buy BNB on')}
           </Typography>
           {links.map(link => (
             <Link key={link.name} href={link.link} variant='subtitle2' ml={1}>

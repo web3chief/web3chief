@@ -10,26 +10,32 @@ export type TimerProps = {
   startTimestamp?: number
   endTimestamp?: number | string
   loading?: boolean
+  texts?: {
+    hours?: string
+    minutes?: string
+    secondas?: string
+    hurryUp?: string
+  }
 }
 
-const Timer = ({ startTimestamp, endTimestamp, loading }: TimerProps) => {
+const Timer = ({ startTimestamp, endTimestamp, loading, texts }: TimerProps) => {
   const { t } = useTranslation('ino')
-
+  const { hours, minutes, secondas, hurryUp } = texts || {}
   const theme = useTheme()
 
   const totalTime = useTimer(startTimestamp, endTimestamp)
 
   const time = [
     {
-      title: t('hours'),
+      title: hours || t('hours'),
       value: totalTime.hoursWithoutDays,
     },
     {
-      title: t('minutes'),
+      title: minutes || t('minutes'),
       value: totalTime.minutes,
     },
     {
-      title: t('seconds'),
+      title: secondas || t('seconds'),
       value: totalTime.seconds,
     },
   ]
@@ -80,7 +86,7 @@ const Timer = ({ startTimestamp, endTimestamp, loading }: TimerProps) => {
                 borderRadius='2px'
               >
                 <Typography variant='timersubtitle' color='text.altPrimary' whiteSpace='nowrap'>
-                  {t('Hurry up to buy!')}
+                  {hurryUp || t('Hurry up to buy!')}
                 </Typography>
               </Box>
             )}

@@ -38,7 +38,6 @@ const BpCheckedIcon = styled(BpIcon)`
     border: none;
   }
   input:disabled ~ & {
-    background-color: #ffffff33;
     border: none;
     &:before {
       display: block;

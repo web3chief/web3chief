@@ -13,6 +13,7 @@ import { WALLET_ICON_BY_CONNECTOR } from '../../config/wallet'
 export type WalletModalProps = Pick<ModalProps, 'isOpen' | 'closeModal'> & {
   walletsData: ConnectorConfig[]
   onClickWallet: (walletData: ConnectorConfig) => void
+  title?: string
 }
 
 export const WalletModal: FC<WalletModalProps> = ({
@@ -20,12 +21,13 @@ export const WalletModal: FC<WalletModalProps> = ({
   isOpen,
   walletsData,
   onClickWallet,
+  title
 }) => {
   const { t } = useTranslation('common')
 
   return (
     <Dialog onClose={closeModal} open={isOpen}>
-      <DialogHeader onClose={closeModal} title={t('Connect wallet')} />
+      <DialogHeader onClose={closeModal} title={title || t('Connect wallet')} />
       <DialogContent>
         <Stack spacing={1}>
           {walletsData.map(data => {

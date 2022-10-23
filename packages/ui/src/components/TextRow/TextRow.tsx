@@ -33,7 +33,6 @@ export const TextRow: FC<TextRowProps> = ({
 }) => (
   <Box>
     <Box flexDirection='row' alignItems='center'>
-      {/*@TODO add variant*/}
       <Typography variant={labelVariant} color='text.secondary'>
         {label}
       </Typography>
@@ -54,7 +53,6 @@ export const TextRow: FC<TextRowProps> = ({
           {isLoading ? <Skeleton width={liner ? '64px' : '140px'} variant='text' /> : value}
         </Typography>
       </Box>
-      {/*@TODO add variant*/}
       {subValue && (
         <Typography
           sx={{

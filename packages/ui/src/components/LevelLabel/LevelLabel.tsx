@@ -18,11 +18,10 @@ const LevelLabel: FC<LevelLabelProps> = ({ size = 'medium', level }) => (
         borderRadius: '50%',
         border: '1px solid',
         borderColor: 'warning.main',
-        background: '#2E222C',
+        bgcolor: 'controls.bg',
       }}
     >
-      {/* TODO сделать через Typography h7 Desktop 1440-1024/Tier/Medium */}
-      <Typography variant='h7' color='#FFBE4D' fontSize={`${size === 'medium' ? '22px' : '12px'}`}>
+      <Typography variant='h7' color='warning.main' fontSize={`${size === 'medium' ? '22px' : '12px'}`}>
         {level}
       </Typography>
     </Box>

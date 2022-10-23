@@ -9,17 +9,23 @@ import { DialogContent } from '../Dialog/DialogContent'
 import { DialogHeader } from '../Dialog/DialogHeader'
 import { useTranslation } from 'next-i18next'
 
-const dataLinks = [
-  { name: 'Chrome', link: '/' },
-  { name: 'Firefox', link: '/' },
-  { name: 'Opera', link: '/' },
-]
 
-export const NonConnectorModal: FC<Pick<ModalProps, 'isOpen' | 'closeModal'>> = ({
+export type NonConnectorModalProps = Pick<ModalProps, 'isOpen' | 'closeModal'> &
+{
+  texts?: {
+    walletNotInstalled?: string, actionToInstall?: string
+  },
+  links: { name: string, link: string }[]
+}
+
+export const NonConnectorModal: FC<NonConnectorModalProps> = ({
   closeModal,
   isOpen,
+  texts,
+  links
 }) => {
   const { t } = useTranslation('common')
+  const { walletNotInstalled, actionToInstall } = texts || {}
 
   return (
     <Dialog onClose={closeModal} open={isOpen}>
@@ -28,13 +34,13 @@ export const NonConnectorModal: FC<Pick<ModalProps, 'isOpen' | 'closeModal'>> = 
         <Box textAlign='center' alignItems='center'>
           <MetamaskIcon fontSize='xxlarge' />
           <Typography variant='modalTitle' mt={2}>
-            {t('Metamask is not installed')}
+            {walletNotInstalled || t('Metamask is not installed')}
           </Typography>
           <Typography mt={2} variant='subtitle1' color='text.secondary'>
-            {t('To continue please install Metamask extension in your browser:')}
+            {actionToInstall || t('To continue please install Metamask extension in your browser:')}
           </Typography>
           <Box width='100%' flexDirection='row' gap={1} mt={4}>
-            {dataLinks.map(button => (
+            {links.map(button => (
               <Link
                 href={button.link}
                 width='100%'

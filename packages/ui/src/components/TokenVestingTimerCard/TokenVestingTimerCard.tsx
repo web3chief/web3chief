@@ -7,14 +7,20 @@ export type TokenVestingTimerCardProps = {
   time: string
   value: string
   progress: number
+  texts?: {
+    sideFront?: string
+    sideBack?: string
+  }
 }
 
 export const TokenVestingTimerCard: FC<TokenVestingTimerCardProps> = ({
   time,
   value,
   progress,
+  texts
 }) => {
   const { t } = useTranslation('tokenVesting')
+  const { sideFront, sideBack } = texts || {}
 
   return (
     <Box
@@ -52,7 +58,7 @@ export const TokenVestingTimerCard: FC<TokenVestingTimerCardProps> = ({
           sx={{ backfaceVisibility: 'hidden' }}
         >
           <Typography color='text.secondary' variant='subtitle2alt'>
-            {t('Your vesting stage')}
+            {sideFront || t('Your vesting stage')}
           </Typography>
           <Typography variant='h4'>{value}</Typography>
           <Box bottom={0} left={0} width='100%' position='absolute' height='4px' bgcolor='alpha.8'>
@@ -83,7 +89,7 @@ export const TokenVestingTimerCard: FC<TokenVestingTimerCardProps> = ({
           sx={{ backfaceVisibility: 'hidden' }}
         >
           <Typography color='text.secondary' variant='subtitle2alt'>
-            {t('Your vesting stage')}
+            {sideBack || t('Your vesting stage')}
           </Typography>
           <Typography variant='h4'>{time}</Typography>
           <Box bottom={0} left={0} width='100%' position='absolute' height='4px' bgcolor='alpha.8'>

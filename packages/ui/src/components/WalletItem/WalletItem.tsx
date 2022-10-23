@@ -13,12 +13,11 @@ type WalletItemProps = {
 }
 
 export const WalletItem: FC<WalletItemProps> = props => (
-  // TODO set width to grid
   <Box
     flexDirection='row'
     alignItems='center'
     justifyContent='space-between'
-    background='#251D25'
+    bgcolor='paper.bg'
     p='17px 20px'
     width='280px'
     minHeight='106px'

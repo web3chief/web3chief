@@ -1,7 +1,7 @@
 import { SxProps, Typography } from '@mui/material'
 import { CloseIcon, ChevronLeftIcon } from '../Icon'
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import { Box } from '../Box'
 import { Skeleton } from '../Skeleton'
 
@@ -11,6 +11,8 @@ export type DialogHeaderProps = {
   onBack?: IconButtonProps['onClick']
   styles?: SxProps
   loading?: boolean
+  closeIcon?: ReactNode
+  chevronLeftIcon?: ReactNode
 }
 
 export const DialogHeader: FC<DialogHeaderProps> = ({
@@ -20,6 +22,8 @@ export const DialogHeader: FC<DialogHeaderProps> = ({
   children,
   styles,
   loading,
+  closeIcon,
+  chevronLeftIcon,
 }) => (
   <Box
     top={0}
@@ -57,7 +61,7 @@ export const DialogHeader: FC<DialogHeaderProps> = ({
               color: 'text.secondary',
             }}
           >
-            <ChevronLeftIcon />
+            {chevronLeftIcon || <ChevronLeftIcon />}
           </IconButton>
         )}
         {loading ? (
@@ -77,7 +81,7 @@ export const DialogHeader: FC<DialogHeaderProps> = ({
           color: 'text.secondary',
         }}
       >
-        <CloseIcon />
+        {closeIcon || <CloseIcon />}
       </IconButton>
     </Box>
     {children}

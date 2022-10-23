@@ -11,7 +11,6 @@ export default {
 
 const Template: ComponentStory<typeof WalletModal> = args => {
   const { isOpen, closeModal, openModal } = useModal(true)
-  // @TODO change hardcode
   const walletsData = getConnectors(MAINNET_BSC_CHAIN_ID)
 
   return (

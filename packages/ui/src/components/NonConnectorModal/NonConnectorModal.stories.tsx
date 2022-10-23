@@ -11,6 +11,12 @@ export default {
     actions: {},
   },
 }
+const dataLinks = [
+  { name: 'Chrome', link: '/' },
+  { name: 'Firefox', link: '/' },
+  { name: 'Opera', link: '/' },
+]
+
 
 const Template: ComponentStory<typeof NonConnectorModal> = () => {
   const { isOpen, closeModal, openModal } = useModal(true)
@@ -19,7 +25,7 @@ const Template: ComponentStory<typeof NonConnectorModal> = () => {
     <>
       <button onClick={openModal}>OpenModal</button>
       <Box sx={{ display: 'flex', padding: '25px' }}>
-        <NonConnectorModal closeModal={closeModal} isOpen={isOpen} />
+        <NonConnectorModal links={dataLinks} closeModal={closeModal} isOpen={isOpen} />
       </Box>
     </>
   )

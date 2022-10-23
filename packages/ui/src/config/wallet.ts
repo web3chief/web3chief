@@ -1,7 +1,7 @@
 import { CoinbaseIcon,
   Coin98Icon,
   TrustIcon, TokenPocketIcon, WalletConnectIcon, BinanceChainIcon, SafepalIcon, MetamaskIcon } from '../components/Icon'
-import { ConnectorNames } from '@web3chief/sdk'
+import { ConnectorNames } from '../../../sdk'
 import { FC } from 'react'
 import { SvgIconProps } from '@mui/material'
 
