@@ -1,6 +1,6 @@
 {
   "name": "@web3chief/ui",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -11,6 +11,10 @@
     "storybook": "start-storybook -s ./public -p 6006 --ci"
   },
   "dependencies": {
+    "@emotion/babel-plugin": "^11.9.2",
+    "@emotion/cache": "^11.7.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
     "@mui/lab": "^5.0.0-alpha.75",
     "@mui/material": "^5.5.2",
@@ -22,9 +26,6 @@
     "@open-wc/webpack-import-meta-loader": "^0.4.7",
     "@storybook/react": "^6.4.20",
     "apexcharts": "^3.35.4",
-    "babel-loader": "^8.2.4",
-    "babel-plugin-inline-react-svg": "^1.0.1",
-    "babel-plugin-macros": "^3.1.0",
     "date-fns": "^2.29.1",
     "dayjs": "^1.11.1",
     "formik": "^2.2.9",
@@ -46,9 +47,13 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@rollup/plugin-url": "^8.0.1",
     "@types/lodash": "^4.14.180",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2",
+    "babel-loader": "^8.2.4",
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "babel-plugin-macros": "^3.1.0",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-url": "^3.0.1",
     "url-loader": "^4.1.1"
