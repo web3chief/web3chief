@@ -1,16 +1,14 @@
-import { copyToClipboard } from '@web3chief/ui/utils/copyToClipboard'
+import { copyToClipboard } from '../utils/copyToClipboard'
 import { useStore } from '@nimel/directorr-react'
-import { NotificationStore } from '@web3chief/ui/Notification/NotificationStore'
-import { useTranslation } from 'next-i18next'
+import { NotificationStore } from '../components/Notification/NotificationStore'
 
-export function useCopyClipboard() {
+export function useCopyClipboard({noticeText}:{noticeText?: string}) {
   const { open } = useStore(NotificationStore)
-  const { t } = useTranslation('common')
 
   return {
     handleCopy: (copyText = '') => {
       copyToClipboard(copyText)
-      open('success', t('Text copied'))
+      open('success', noticeText||'Text copied')
     },
   }
 }

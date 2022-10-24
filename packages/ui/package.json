@@ -1,73 +1,85 @@
 {
-	"name": "@web3chief/ui",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"lint": "tsc --noEmit && eslint --fix \"**/*.@(js|jsx|ts|tsx)\"",
-		"lint:check": "tsc --noEmit && eslint \"**/*.@(js|jsx|ts|tsx)\"",
-		"storybook": "start-storybook -s ./public -p 6006 --ci"
-	},
-	"dependencies": {
-		"@mui/icons-material": "^5.5.1",
-		"@mui/lab": "^5.0.0-alpha.75",
-		"@mui/material": "^5.5.2",
-		"@mui/system": "^5.7.0",
-		"@mui/types": "^7.1.4",
-		"@nimel/directorr": "^1.0.0-rc.18",
-		"@nimel/directorr-middlewares": "^1.0.0-rc.18",
-		"@nimel/directorr-react": "^1.0.0-rc.18",
-		"@open-wc/webpack-import-meta-loader": "^0.4.7",
-		"@storybook/react": "^6.4.20",
-		"apexcharts": "^3.35.4",
-		"babel-loader": "^8.2.4",
-		"babel-plugin-inline-react-svg": "^1.0.1",
-		"babel-plugin-macros": "^3.1.0",
-		"date-fns": "^2.29.1",
-		"dayjs": "^1.11.1",
-		"lodash": "^4.17.21",
-		"formik": "^2.2.9",
-		"mobx": "^6.2.0",
-		"mobx-react-lite": "^3.2.0",
-		"next": "12.0.10",
-		"next-i18next": "^10.2.0",
-		"notistack": "^2.0.5",
-		"polished": "^4.1.4",
-		"react": "^17.0.2",
-		"react-apexcharts": "^1.4.0",
-		"react-dom": "^17.0.2",
-		"react-imask": "^6.4.3",
-		"react-share": "^4.4.0",
-		"sass": "^1.52.1",
-		"squareicon": "^1.0.3",
-		"swiper": "^6.0.2",
-		"ts-loader": "~8.2.0",
-		"yup": "^0.32.11"
-	},
-	"devDependencies": {
-		"@types/lodash": "^4.14.180",
-		"@types/react": "17.0.2",
-		"@types/react-dom": "17.0.2",
-		"url-loader": "^4.1.1"
-	},
-	"engines": {
-		"node": "16.*"
-	},
-	"browser": {
-		"fs": false,
-		"path": false,
-		"os": false,
-		"module": false
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 4 chrome version",
-			"last 4 firefox version",
-			"last 4 safari version"
-		]
-	}
+  "name": "@web3chief/ui",
+  "version": "0.1.6",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf ./dist && rollup -c ./rollup.config.js",
+    "lint": "tsc --noEmit && eslint --fix \"**/*.@(js|jsx|ts|tsx)\"",
+    "lint:check": "tsc --noEmit && eslint \"**/*.@(js|jsx|ts|tsx)\"",
+    "storybook": "start-storybook -s ./public -p 6006 --ci"
+  },
+  "dependencies": {
+    "@emotion/babel-plugin": "^11.9.2",
+    "@emotion/cache": "^11.7.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/lab": "^5.0.0-alpha.75",
+    "@mui/material": "^5.5.2",
+    "@mui/system": "^5.7.0",
+    "@mui/types": "^7.1.4",
+    "@nimel/directorr": "^1.0.0-rc.18",
+    "@nimel/directorr-middlewares": "^1.0.0-rc.18",
+    "@nimel/directorr-react": "^1.0.0-rc.18",
+    "@open-wc/webpack-import-meta-loader": "^0.4.7",
+    "@storybook/react": "^6.4.20",
+    "apexcharts": "^3.35.4",
+    "date-fns": "^2.29.1",
+    "dayjs": "^1.11.1",
+    "formik": "^2.2.9",
+    "lodash": "^4.17.21",
+    "mobx": "^6.2.0",
+    "mobx-react-lite": "^3.2.0",
+    "next": "12.0.10",
+    "notistack": "^2.0.5",
+    "polished": "^4.1.4",
+    "react": "^17.0.2",
+    "react-apexcharts": "^1.4.0",
+    "react-dom": "^17.0.2",
+    "react-imask": "^6.4.3",
+    "react-share": "^4.4.0",
+    "sass": "^1.52.1",
+    "squareicon": "^1.0.3",
+    "swiper": "^6.0.2",
+    "ts-loader": "~8.2.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@rollup/plugin-url": "^8.0.1",
+    "@types/lodash": "^4.14.180",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
+    "babel-loader": "^8.2.4",
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "babel-plugin-macros": "^3.1.0",
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-url": "^3.0.1",
+    "url-loader": "^4.1.1"
+  },
+  "engines": {
+    "node": "16.*"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false,
+    "module": false
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 4 chrome version",
+      "last 4 firefox version",
+      "last 4 safari version"
+    ]
+  },
+  "author": "",
+  "license": "MIT",
+  "description": ""
 }

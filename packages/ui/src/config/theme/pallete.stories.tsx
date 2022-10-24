@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { ComponentStory } from '@storybook/react'
 import Typography from '@mui/material/Typography'
-import { Box } from '@web3chief/ui/Box'
+import { Box } from '../../components/Box'
 
 type ColorBlockProps = {
   bgcolor: string
