@@ -64,8 +64,8 @@ import { FilterIcon } from './FilterIcon'
 import { IconLinkOn } from './IconLinkOn'
 import { SearchIcon } from './SearchIcon'
 import { LockIcon } from './LockIcon'
-import { LockIcon2 } from './LockIcon2'
-import { LockIcon3 } from './LockIcon3'
+// import { LockIcon2 } from './LockIcon2'
+// import { LockIcon3 } from './LockIcon3'
 import { AppleLogo } from './AppleLogo'
 import { PlayMarketLogo } from './PlayMarketLogo'
 
@@ -570,18 +570,18 @@ const Template = () => (
           </TableCell>
           <TableCell align='center'>LockIcon1</TableCell>
         </TableRow>
-        <TableRow>
-          <TableCell align='center'>
-            <LockIcon2 fontSize='xxlarge' />
-          </TableCell>
-          <TableCell align='center'>LockIcon2</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell align='center'>
-            <LockIcon3 fontSize='xxlarge' />
-          </TableCell>
-          <TableCell align='center'>LockIcon3</TableCell>
-        </TableRow>
+        {/*<TableRow>*/}
+        {/*  <TableCell align='center'>*/}
+        {/*    <LockIcon2 fontSize='xxlarge' />*/}
+        {/*  </TableCell>*/}
+        {/*  <TableCell align='center'>LockIcon2</TableCell>*/}
+        {/*</TableRow>*/}
+        {/*<TableRow>*/}
+        {/*  <TableCell align='center'>*/}
+        {/*    <LockIcon3 fontSize='xxlarge' />*/}
+        {/*  </TableCell>*/}
+        {/*  <TableCell align='center'>LockIcon3</TableCell>*/}
+        {/*</TableRow>*/}
         <TableRow>
           <TableCell align='center'>
             <AppleLogo fontSize='xxlarge' />

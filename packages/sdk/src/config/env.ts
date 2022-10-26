@@ -7,4 +7,4 @@ export const IS_SERVER = typeof window === 'undefined'
 export const API_URL = process.env.API_URL
 export const PACKAGE_NAME = pkg.name
 
-if (!API_URL) throw new Error(`${PACKAGE_NAME}: set proccess.env.API_URL`)
+// if (!API_URL) throw new Error(`${PACKAGE_NAME}: set proccess.env.API_URL`)

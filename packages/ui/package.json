@@ -8,13 +8,14 @@
     "build": "rm -rf ./dist && rollup -c ./rollup.config.js",
     "lint": "tsc --noEmit && eslint --fix \"**/*.@(js|jsx|ts|tsx)\"",
     "lint:check": "tsc --noEmit && eslint \"**/*.@(js|jsx|ts|tsx)\"",
-    "storybook": "start-storybook -s ./public -p 6006 --ci"
+    "storybook": "start-storybook -s ./dist -p 6006 --ci"
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.9.2",
     "@emotion/cache": "^11.7.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.8.1",
+    "@gogaille/storybook-addon-next-router": "^4.0.0",
     "@mui/icons-material": "^5.5.1",
     "@mui/lab": "^5.0.0-alpha.75",
     "@mui/material": "^5.5.2",
@@ -24,7 +25,12 @@
     "@nimel/directorr-middlewares": "^1.0.0-rc.18",
     "@nimel/directorr-react": "^1.0.0-rc.18",
     "@open-wc/webpack-import-meta-loader": "^0.4.7",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
     "@storybook/react": "^6.4.20",
+    "@storybook/testing-library": "^0.0.13",
     "apexcharts": "^3.35.4",
     "date-fns": "^2.29.1",
     "dayjs": "^1.11.1",
