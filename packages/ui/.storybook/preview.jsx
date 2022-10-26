@@ -1,15 +1,13 @@
 import { ThemeProvider } from '@mui/material/styles'
-import { darkTheme } from '../src/@web3chief/ui/config/theme'
-import '../src/@web3chief/ui/config/yup'
-import '../src/@web3chief/ui/config/directorr'
+import { darkTheme } from '../src/config/theme'
 import { CssBaseline } from '@mui/material'
 import * as NextImage from 'next/image'
 import { CacheProvider } from '@emotion/react'
 import { DirectorrProvider } from '@nimel/directorr-react'
 import { withNextRouter } from '@gogaille/storybook-addon-next-router'
-import { SnackbarProvider } from '..src/componets/Snackbar'
+import { SnackbarProvider } from '../src/components/Snackbar'
 import { createEmotionCache } from '../src/utils/createEmotionCache'
-import { Notification } from '../src/@web3chief/ui/Notification/Notification'
+import { Notification } from '../src/components/Notification'
 import {
   getAvatarsQuery,
   getProfilesQuery,
@@ -41,9 +39,6 @@ import {
   rootQuery,
   QueryCache,
 } from '@web3chief/sdk'
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { I18nextProvider } from 'react-i18next'
-import i18n from './i18n'
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -122,10 +117,5 @@ const withThemeProvider = (Story, context) => (
   </DirectorrProvider>
 )
 
-const withi8nProvider = (Story, context) => (
-  <I18nextProvider i18n={i18n}>
-    <Story {...context} />
-  </I18nextProvider>
-)
 
-export const decorators = [withNextRouter, withThemeProvider, withi8nProvider]
+export const decorators = [withNextRouter, withThemeProvider]
