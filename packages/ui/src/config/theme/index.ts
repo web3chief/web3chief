@@ -1503,6 +1503,28 @@ const themeOptions = {
             },
           }),
         },
+        {
+          props: { variant: 'filled' },
+          style: sx({
+            bgcolor: 'rgba(255, 255, 255, 0.07)',
+            '& .MuiSelect-select.MuiInputBase-input': {
+              paddingTop: '8px',
+              paddingBottom: '8px',
+              borderRadius: '8px',
+              '&:hover': {
+                borderRadius: '8px',
+                boxShadow: '0px 0px 0px 1px rgba(255, 255, 255, 0.24) inset',
+                backgroundColor: 'none',
+              },
+            },
+            '& .Mui-focused': {
+              borderBottom: 'none !important',
+            },
+            '&:hover': {
+              bgcolor: 'rgba(255, 255, 255, 0.07)',
+            },
+          }),
+        },
       ],
     },
     MuiMenu: {
