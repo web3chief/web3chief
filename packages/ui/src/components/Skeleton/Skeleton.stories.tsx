@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Skeleton } from './Skeleton'
 
 export default {
-  title: '@web3chief/ui/Skeleton',
+  title: 'Skeleton',
   component: Skeleton,
 } as ComponentMeta<typeof Skeleton>
 

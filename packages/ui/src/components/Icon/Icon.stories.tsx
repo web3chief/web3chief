@@ -4,7 +4,7 @@ import SvgIcon from '@mui/material/SvgIcon'
 import { DiscordIcon } from './DiscordIcon'
 
 export default {
-  title: '@web3chief/ui/Icon',
+  title: 'Icon',
   component: SvgIcon,
 } as ComponentMeta<typeof SvgIcon>
 

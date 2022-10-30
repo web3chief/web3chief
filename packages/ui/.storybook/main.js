@@ -25,14 +25,9 @@ module.exports = {
         components: toPath('src/components'),
         containers: toPath('src/containers'),
         config: toPath('src/config'),
-        pages: toPath('src/pages'),
-        sagas: toPath('src/sagas'),
-        stores: toPath('src/stores'),
         hooks: toPath('src/hooks'),
         types: toPath('src/types'),
         utils: toPath('src/utils'),
-        queries: toPath('src/queries'),
-        '@web3chief/sdk': toPath('../sdk/src'),
       },
     },
     module: {
@@ -48,7 +43,6 @@ module.exports = {
               },
             },
           ],
-          include: /sdk/,
           exclude: /node_modules/,
         },
         {

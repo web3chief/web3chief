@@ -16,7 +16,7 @@ const LinkBlock = () => (
 )
 
 export default {
-  title: '@web3chief/ui/Link',
+  title: 'Link',
   component: Link,
 } as ComponentMeta<typeof Link>
 

@@ -4,7 +4,7 @@ import { CheckboxFormControlLabel } from '../CheckboxFormControlLabel'
 import { Box } from '../Box'
 
 export default {
-  title: '../Checkbox',
+  title: 'Checkbox',
   component: CheckboxFormControlLabel,
   parameters: {
     actions: {},

@@ -14,7 +14,7 @@ const defaultWalletItem = {
 }
 
 export default {
-  title: '@web3chief/ui/WalletItem',
+  title: 'WalletItem',
   component: WalletItem,
   parameters: {
     actions: {},

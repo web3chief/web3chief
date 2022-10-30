@@ -13,7 +13,7 @@ const SnackBlock = () => {
 }
 
 export default {
-  title: '@web3chief/ui/Snackbar',
+  title: 'Snackbar',
   component: SnackBlock,
   decorators: [
     (Story, context) => (

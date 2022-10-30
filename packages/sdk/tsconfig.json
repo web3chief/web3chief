@@ -1,6 +1,9 @@
 {
   "extends": "../../tsconfig.json",
   "exclude": ["node_modules"],
+  "compilerOptions": {
+    "lib": ["es2017", "DOM"]
+  },
   "include": [
     "**/*.ts",
     "**/*.tsx"

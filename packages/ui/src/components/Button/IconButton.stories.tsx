@@ -3,7 +3,7 @@ import { Stack, IconButton } from '@mui/material'
 import { DiscordIcon } from '../Icon/DiscordIcon'
 
 export default {
-  title: '@web3chief/ui/IconButton',
+  title: 'IconButton',
   component: IconButton,
   argTypes: { onClick: { action: 'onClick' } },
 } as ComponentMeta<typeof IconButton>

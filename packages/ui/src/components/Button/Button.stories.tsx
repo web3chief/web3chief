@@ -4,7 +4,7 @@ import { DiscordIcon } from '../Icon/DiscordIcon'
 import { Button } from './Button'
 
 export default {
-  title: '@web3chief/ui/Button',
+  title: 'Button',
   component: Button,
   argTypes: { onClick: { action: 'onClick' } },
 } as ComponentMeta<typeof Button>

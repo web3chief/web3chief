@@ -70,7 +70,7 @@ import { AppleLogo } from './AppleLogo'
 import { PlayMarketLogo } from './PlayMarketLogo'
 
 export default {
-  title: './Icon',
+  title: 'Icon',
 }
 
 const Template = () => (

@@ -4,7 +4,7 @@ import BigNftBox from './BigNftBox'
 import SkeletonBigNftBox from './SkeletonBigNftBox'
 
 export default {
-  title: 'pages/BoxNftPage',
+  title: 'BoxNftPage',
   component: BigNftBox,
 } as ComponentMeta<typeof BigNftBox>
 

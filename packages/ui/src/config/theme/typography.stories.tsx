@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { ComponentStory } from '@storybook/react'
 import Typography, { TypographyProps } from '@mui/material/Typography'
-import { useBreakpoint } from '../../hooks'
+import { useBreakpoint } from '../../hooks/useBreakpoint'
 import { Box } from '../../components/Box'
 
 type TextBlockProps = {
@@ -59,7 +59,7 @@ const Typo = () => {
 }
 
 export default {
-  title: '@web3chief/ui/Typography',
+  title: 'Typography',
   component: Typo,
 }
 
