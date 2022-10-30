@@ -50,7 +50,7 @@ const Pallete = () => (
 )
 
 export default {
-  title: '@web3chief/ui/Pallete',
+  title: 'Pallete',
   component: Pallete,
 }
 

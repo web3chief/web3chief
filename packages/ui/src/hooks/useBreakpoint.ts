@@ -1,6 +1,5 @@
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { OverridableStringUnion } from '@mui/types'
 import { BreakpointOverrides } from '@mui/system/createTheme/createBreakpoints'
 
@@ -31,5 +30,7 @@ export function useBreakpoint() {
     container,
   }
 
-  return [...Object.entries(BREAKPOINTS)].find(([_, value]) => value)?.[0] as BreakpointUpdate
+  // @ts-ignore
+  const [first] = [...Object.entries(BREAKPOINTS)].find(([_, value]) => value);
+  return first as BreakpointUpdate;
 }

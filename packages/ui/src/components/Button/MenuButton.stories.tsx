@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack'
 import { MenuButton } from './MenuButton'
 
 export default {
-  title: '@web3chief/ui/MenuButton',
+  title: 'MenuButton',
   component: MenuButton,
   argTypes: { onClick: { action: 'onClick' } },
 } as ComponentMeta<typeof MenuButton>

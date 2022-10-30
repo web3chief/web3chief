@@ -4,7 +4,7 @@ import { Pagination } from './index'
 import Box from '@mui/material/Box'
 
 export default {
-  title: '@web3chief/ui/Pagination',
+  title: 'Pagination',
   component: Pagination,
 }
 

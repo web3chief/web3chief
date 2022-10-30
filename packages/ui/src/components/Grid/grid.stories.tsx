@@ -62,7 +62,7 @@ const GridContainer: FC = () => {
 }
 
 export default {
-  title: '../Grid',
+  title: 'Grid',
   component: Grid,
 }
 

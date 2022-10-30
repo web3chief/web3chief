@@ -5,7 +5,7 @@ import { Button } from '../Button'
 import { Banner } from './Banner'
 
 export default {
-  title: '@web3chief/ui/Banner',
+  title: 'Banner',
   component: Banner,
 } as ComponentMeta<typeof Banner>
 

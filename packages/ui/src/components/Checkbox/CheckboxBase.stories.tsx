@@ -4,7 +4,7 @@ import { Checkbox } from './Checkbox'
 import { Box } from '@mui/material'
 
 export default {
-  title: '@web3chief/ui/Checkbox',
+  title: 'Checkbox',
   component: Checkbox,
   parameters: {
     actions: {},
